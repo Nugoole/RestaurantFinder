@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantFinder", "Restaur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{9826664C-4AE5-4CD8-9E63-864218C89921}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantDB", "RestaurantDB\RestaurantDB.csproj", "{9657575B-571D-4135-83B6-5CC485335A13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9826664C-4AE5-4CD8-9E63-864218C89921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9826664C-4AE5-4CD8-9E63-864218C89921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9826664C-4AE5-4CD8-9E63-864218C89921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9657575B-571D-4135-83B6-5CC485335A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9657575B-571D-4135-83B6-5CC485335A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9657575B-571D-4135-83B6-5CC485335A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9657575B-571D-4135-83B6-5CC485335A13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
