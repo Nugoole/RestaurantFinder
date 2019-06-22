@@ -81,6 +81,7 @@
             this.ckb한식.Name = "ckb한식";
             this.ckb한식.Size = new System.Drawing.Size(48, 16);
             this.ckb한식.TabIndex = 6;
+            this.ckb한식.Tag = "6";
             this.ckb한식.Text = "한식";
             this.ckb한식.UseVisualStyleBackColor = true;
             // 
@@ -91,6 +92,7 @@
             this.ckb패밀리레스토랑.Name = "ckb패밀리레스토랑";
             this.ckb패밀리레스토랑.Size = new System.Drawing.Size(108, 16);
             this.ckb패밀리레스토랑.TabIndex = 5;
+            this.ckb패밀리레스토랑.Tag = "5";
             this.ckb패밀리레스토랑.Text = "패밀리레스토랑";
             this.ckb패밀리레스토랑.UseVisualStyleBackColor = true;
             // 
@@ -101,6 +103,7 @@
             this.ckb채식전문점.Name = "ckb채식전문점";
             this.ckb채식전문점.Size = new System.Drawing.Size(84, 16);
             this.ckb채식전문점.TabIndex = 5;
+            this.ckb채식전문점.Tag = "7";
             this.ckb채식전문점.Text = "채식전문점";
             this.ckb채식전문점.UseVisualStyleBackColor = true;
             // 
@@ -111,6 +114,7 @@
             this.ckb카페전통찻집.Name = "ckb카페전통찻집";
             this.ckb카페전통찻집.Size = new System.Drawing.Size(102, 16);
             this.ckb카페전통찻집.TabIndex = 5;
+            this.ckb카페전통찻집.Tag = "8";
             this.ckb카페전통찻집.Text = "카페/전통찻집";
             this.ckb카페전통찻집.UseVisualStyleBackColor = true;
             // 
@@ -121,6 +125,7 @@
             this.ckb서양식.Name = "ckb서양식";
             this.ckb서양식.Size = new System.Drawing.Size(60, 16);
             this.ckb서양식.TabIndex = 5;
+            this.ckb서양식.Tag = "4";
             this.ckb서양식.Text = "서양식";
             this.ckb서양식.UseVisualStyleBackColor = true;
             // 
@@ -131,6 +136,7 @@
             this.ckb일식.Name = "ckb일식";
             this.ckb일식.Size = new System.Drawing.Size(48, 16);
             this.ckb일식.TabIndex = 5;
+            this.ckb일식.Tag = "3";
             this.ckb일식.Text = "일식";
             this.ckb일식.UseVisualStyleBackColor = true;
             // 
@@ -141,6 +147,7 @@
             this.ckb이색음식점.Name = "ckb이색음식점";
             this.ckb이색음식점.Size = new System.Drawing.Size(84, 16);
             this.ckb이색음식점.TabIndex = 5;
+            this.ckb이색음식점.Tag = "7";
             this.ckb이색음식점.Text = "이색음식점";
             this.ckb이색음식점.UseVisualStyleBackColor = true;
             // 
@@ -151,6 +158,7 @@
             this.ckb아시아식.Name = "ckb아시아식";
             this.ckb아시아식.Size = new System.Drawing.Size(72, 16);
             this.ckb아시아식.TabIndex = 5;
+            this.ckb아시아식.Tag = "2";
             this.ckb아시아식.Text = "아시아식";
             this.ckb아시아식.UseVisualStyleBackColor = true;
             // 
@@ -161,6 +169,7 @@
             this.ckb중식.Name = "ckb중식";
             this.ckb중식.Size = new System.Drawing.Size(48, 16);
             this.ckb중식.TabIndex = 5;
+            this.ckb중식.Tag = "9";
             this.ckb중식.Text = "중식";
             this.ckb중식.UseVisualStyleBackColor = true;
             // 
@@ -172,6 +181,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // txbKeyword
             // 
@@ -190,6 +200,7 @@
             this.cbbCity.Name = "cbbCity";
             this.cbbCity.Size = new System.Drawing.Size(111, 20);
             this.cbbCity.TabIndex = 2;
+            this.cbbCity.ValueMember = "Id";
             // 
             // bdsCity
             // 

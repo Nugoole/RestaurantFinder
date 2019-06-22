@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -67,14 +74,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
+    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
       <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
       <Name>RestaurantDB</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
-    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

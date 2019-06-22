@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserControls.ResultFormats
 {
-    class SearchResultData
+    public class SearchResultData
     {
         public string Name { get; set; }
         public string Outline { get; set; }

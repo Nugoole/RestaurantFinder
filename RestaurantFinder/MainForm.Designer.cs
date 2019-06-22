@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uscSearchBox1 = new UserControls.uscSearchBox();
             this.uscResultGrid1 = new UserControls.uscResultGrid();
+            this.uscSearchBox1 = new UserControls.uscSearchBox();
             this.SuspendLayout();
+            // 
+            // uscResultGrid1
+            // 
+            this.uscResultGrid1.Location = new System.Drawing.Point(202, 117);
+            this.uscResultGrid1.Name = "uscResultGrid1";
+            this.uscResultGrid1.Size = new System.Drawing.Size(669, 333);
+            this.uscResultGrid1.TabIndex = 1;
+            this.uscResultGrid1.CellDoubleClickedHandler += new System.Action<object, UserControls.ResultFormats.SearchResultData>(this.UscResultGrid1_CellDoubleClickedHandler);
             // 
             // uscSearchBox1
             // 
@@ -40,13 +48,7 @@
             this.uscSearchBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.uscSearchBox1.Size = new System.Drawing.Size(579, 118);
             this.uscSearchBox1.TabIndex = 0;
-            // 
-            // uscResultGrid1
-            // 
-            this.uscResultGrid1.Location = new System.Drawing.Point(164, 108);
-            this.uscResultGrid1.Name = "uscResultGrid1";
-            this.uscResultGrid1.Size = new System.Drawing.Size(669, 333);
-            this.uscResultGrid1.TabIndex = 1;
+            this.uscSearchBox1.SearchButtonHandler += new System.Action<object, RestaurantDB.DB_jun.SearchConditions>(this.UscSearchBox1_SearchButtonHandler);
             // 
             // MainForm
             // 
