@@ -22,16 +22,20 @@ namespace UserControls
         private void UscSearchBox_Load(object sender, EventArgs e)
         {
             if(!DesignMode)
-                bdsCity.DataSource = DB<City>.GetAll();
+                bdsCity.DataSource = DB<City>.GetAll().join;
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
+            SearchConditions.Condition.FoodTypeIds.Clear();
             foreach (var item in Controls[0].Controls)
             {
                 if (item.GetType() == typeof(CheckBox))
                     if ((item as CheckBox).Checked)
                         SearchConditions.Condition.FoodTypeIds.Add(int.Parse((item as CheckBox).Tag.ToString()));
+                DateTime date = new DateTime();
+                date.Hour = 10;
+                
             }
 
             SearchConditions.Condition.CityId = (int)cbbCity.SelectedValue;
@@ -55,5 +59,10 @@ namespace UserControls
             return SearchConditions.Condition;
         }
         #endregion
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

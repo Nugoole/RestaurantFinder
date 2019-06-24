@@ -101,5 +101,10 @@ namespace UserControls
             return args;
         }
         #endregion
+
+        private void GridResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridResult = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outlineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdsResult = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsResult)).BeginInit();
             this.SuspendLayout();
@@ -86,16 +86,8 @@
             this.gridResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridResult.Size = new System.Drawing.Size(669, 321);
             this.gridResult.TabIndex = 0;
+            this.gridResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridResult_CellContentClick);
             this.gridResult.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridResult_CellDoubleClick);
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 321);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(669, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -118,6 +110,15 @@
             // bdsResult
             // 
             this.bdsResult.DataSource = typeof(UserControls.ResultFormats.SearchResultData);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Location = new System.Drawing.Point(0, 321);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(669, 12);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // uscResultGrid
             // 
