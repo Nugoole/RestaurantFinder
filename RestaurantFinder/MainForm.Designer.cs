@@ -44,6 +44,9 @@
             // 
             // uscResultGrid1
             // 
+            this.uscResultGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uscResultGrid1.Location = new System.Drawing.Point(426, 114);
             this.uscResultGrid1.Name = "uscResultGrid1";
             this.uscResultGrid1.Size = new System.Drawing.Size(579, 438);
@@ -52,6 +55,8 @@
             // 
             // uscSearchBox1
             // 
+            this.uscSearchBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uscSearchBox1.AutoSize = true;
             this.uscSearchBox1.Location = new System.Drawing.Point(426, 1);
             this.uscSearchBox1.Name = "uscSearchBox1";

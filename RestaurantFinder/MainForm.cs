@@ -20,9 +20,9 @@ namespace RestaurantFinder
 
         //셀 더블클릭 이벤트 시 발생할 함수
         private void UscResultGrid1_CellDoubleClickedHandler(object arg1, UserControls.ResultFormats.SearchResultData arg2)
-        {            
-            //Form reservation   = new reservationForm(arg2);
-            //reservation.Show();
+        {
+            ReservationForm reservation = new ReservationForm(arg2.Name);
+            reservation.ShowDialog();
         }
 
         //검색버튼 클릭 시 발생할 함수
