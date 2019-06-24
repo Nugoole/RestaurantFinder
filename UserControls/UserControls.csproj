@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -43,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="funcsForPivot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="MapsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -50,12 +60,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ResultFormats\PivotResultData.cs" />
     <Compile Include="ucsChooseLocation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucsChooseLocation.Designer.cs">
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultFormats\SearchResultData.cs" />
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +149,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ulsan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
+    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
+      <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
+      <Name>RestaurantDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -59,10 +59,11 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // btnJeju
             // 
-            this.btnJeju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnJeju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnJeju.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnJeju.Location = new System.Drawing.Point(260, 375);
             this.btnJeju.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -74,7 +75,7 @@
             // 
             // btnJeonnam
             // 
-            this.btnJeonnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnJeonnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnJeonnam.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnJeonnam.Location = new System.Drawing.Point(320, 344);
             this.btnJeonnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -86,7 +87,7 @@
             // 
             // btnJeonbuk
             // 
-            this.btnJeonbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnJeonbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnJeonbuk.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnJeonbuk.Location = new System.Drawing.Point(260, 344);
             this.btnJeonbuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -98,7 +99,7 @@
             // 
             // btnGyeongnam
             // 
-            this.btnGyeongnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGyeongnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGyeongnam.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGyeongnam.Location = new System.Drawing.Point(320, 313);
             this.btnGyeongnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -110,7 +111,7 @@
             // 
             // btnGyeongbuk
             // 
-            this.btnGyeongbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGyeongbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGyeongbuk.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGyeongbuk.Location = new System.Drawing.Point(260, 313);
             this.btnGyeongbuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -122,7 +123,7 @@
             // 
             // btnChungnam
             // 
-            this.btnChungnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChungnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChungnam.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChungnam.Location = new System.Drawing.Point(320, 282);
             this.btnChungnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -134,7 +135,7 @@
             // 
             // btnChungbuk
             // 
-            this.btnChungbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChungbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChungbuk.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChungbuk.Location = new System.Drawing.Point(260, 282);
             this.btnChungbuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -146,7 +147,7 @@
             // 
             // btnGangwon
             // 
-            this.btnGangwon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGangwon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGangwon.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGangwon.Location = new System.Drawing.Point(320, 251);
             this.btnGangwon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -158,7 +159,7 @@
             // 
             // btnGyeonggi
             // 
-            this.btnGyeonggi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGyeonggi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGyeonggi.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGyeonggi.Location = new System.Drawing.Point(260, 251);
             this.btnGyeonggi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -170,7 +171,7 @@
             // 
             // btnSejong
             // 
-            this.btnSejong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSejong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSejong.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSejong.Location = new System.Drawing.Point(320, 220);
             this.btnSejong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -182,7 +183,7 @@
             // 
             // btnUlsan
             // 
-            this.btnUlsan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUlsan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUlsan.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUlsan.Location = new System.Drawing.Point(260, 220);
             this.btnUlsan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -194,7 +195,7 @@
             // 
             // btnDaejeon
             // 
-            this.btnDaejeon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDaejeon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDaejeon.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDaejeon.Location = new System.Drawing.Point(320, 189);
             this.btnDaejeon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -206,7 +207,7 @@
             // 
             // btnGwangju
             // 
-            this.btnGwangju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGwangju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGwangju.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGwangju.Location = new System.Drawing.Point(260, 189);
             this.btnGwangju.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -218,7 +219,7 @@
             // 
             // btnDaegu
             // 
-            this.btnDaegu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDaegu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDaegu.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDaegu.Location = new System.Drawing.Point(320, 158);
             this.btnDaegu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -230,7 +231,7 @@
             // 
             // btnIncheon
             // 
-            this.btnIncheon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIncheon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIncheon.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnIncheon.Location = new System.Drawing.Point(260, 158);
             this.btnIncheon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -242,7 +243,7 @@
             // 
             // btnBusan
             // 
-            this.btnBusan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBusan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBusan.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnBusan.Location = new System.Drawing.Point(320, 127);
             this.btnBusan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -254,7 +255,7 @@
             // 
             // btnSeoul
             // 
-            this.btnSeoul.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSeoul.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSeoul.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSeoul.Location = new System.Drawing.Point(260, 127);
             this.btnSeoul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

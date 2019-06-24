@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RestaurantFinder
+namespace RestaurantDB
 {
     using System;
     using System.Data.Entity;

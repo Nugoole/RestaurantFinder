@@ -7,24 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RestaurantFinder
+namespace RestaurantDB
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class City
+    public partial class State
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public City()
+        public State()
         {
+            this.Cities = new HashSet<City>();
             this.Stores = new HashSet<Store>();
         }
     
-        public int CityId { get; set; }
         public int StateId { get; set; }
         public string Name { get; set; }
     
-        public virtual State State { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<City> Cities { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Store> Stores { get; set; }
     }

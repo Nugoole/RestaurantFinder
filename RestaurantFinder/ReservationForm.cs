@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,13 +18,24 @@ namespace RestaurantFinder
             InitializeComponent();
         }
 
+        public ReservationForm(string storeName)
+        {
+            InitializeComponent();
+            txbStoreName.Text = storeName;
+        }
+
         private void BtnMadeReservation_Click(object sender, EventArgs e)
         {
-            //string store = txbStoreName.Text = "한미락";
-            //string name = txbReservationName.Text = "이태희";
-            //string phone = txbPhoneNumber.Text = "010-7777-7777";
-            //string date = ReservationOn.Value.ToLongDateString();
-            //string people = txbNumberOfPeople.Text = "6";
+            ReservitonData reservitonData = new ReservitonData();
+
+            reservitonData.StoreName = txbStoreName.Text;
+            reservitonData.ResetvationName = txbReservationName.Text;
+            reservitonData.PhoneNumber = txbPhoneNumber.Text;
+            reservitonData.ReservationOn = ReservationOn.Value;
+            reservitonData.NumberOfPeople = txbNumberOfPeople.Text;
+
+
+        }
 
             //MessageBox.Show($"{store}\n{name}\n{phone}\n{date}\n{people} 명");
 
@@ -37,6 +49,9 @@ namespace RestaurantFinder
             reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
         }
 
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();

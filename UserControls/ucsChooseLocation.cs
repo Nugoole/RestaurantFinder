@@ -30,8 +30,6 @@ namespace UserControls
 
             buttons = new List<Button>();
 
-
-
             buttons.Add(btnSeoul);
             buttons.Add(btnBusan);
             buttons.Add(btnIncheon);
@@ -53,17 +51,25 @@ namespace UserControls
 
         private void UcsChooseLocation_Load(object sender, EventArgs e)
         {
-            pictureBox.Image = Resources.전국지도;
-            Maps = Resources.ResourceManager
-                       .GetResourceSet(CultureInfo.CurrentCulture, true, true)
-                       .Cast<DictionaryEntry>()
-                       .Where(x => x.Value.GetType() == typeof(Bitmap))
-                       .Select(x => new MapsData
-                       {
-                           Name = x.Key.ToString(),
-                           Image = (Bitmap)x.Value
-                       })
-                       .ToList();
+            if (!DesignMode)
+            {
+                BitmapNButtonsInit();
+                buttons.ForEach(x => x.MouseEnter += OnMouseEnter);
+                buttons.ForEach(x => x.MouseLeave += OnMouseLeave);
+                buttons.ForEach(x => x.Click += OnButtonClick);
+
+                pictureBox.Image = Resources.전국지도;
+                Maps = Resources.ResourceManager
+                           .GetResourceSet(CultureInfo.CurrentCulture, true, true)
+                           .Cast<DictionaryEntry>()
+                           .Where(x => x.Value.GetType() == typeof(Bitmap))
+                           .Select(x => new MapsData
+                           {
+                               Name = x.Key.ToString(),
+                               Image = (Bitmap)x.Value
+                           })
+                           .ToList();
+            }
         }
 
         private void OnMouseEnter(object sender, EventArgs e)
@@ -82,18 +88,31 @@ namespace UserControls
             pictureBox.Image = Resources.전국지도;
         }
 
+        private bool buttonWasClicked = false;
+
+        private void OnButtonClick(object sender, EventArgs e)
         private void OnButtonClick(object sender, EventArgs e)
         {
             Button button = sender as Button;
 
-            foreach (var x in buttons)
+            buttonWasClicked = true;
+
+            foreach (var map in Maps)
             {
-                if (button.Text == x.Text)
+                if (button.Text == map.Name && buttonWasClicked)
                 {
-                    //CitySelect form = new CitySelect(x.Text);
-                    //form.ShowDialog();
+                    pictureBox.Image = map.Image;
+                    buttons.ForEach(x => x.MouseEnter -= OnMouseEnter);
+                    buttons.ForEach(x => x.MouseLeave -= OnMouseLeave);
                 }
             }
+        }
+
+        private void PictureBox_Click(object sender, EventArgs e)
+        {
+            pictureBox.Image = Resources.전국지도;
+            buttons.ForEach(x => x.MouseEnter += OnMouseEnter);
+            buttons.ForEach(x => x.MouseLeave += OnMouseLeave);
         }
     }
 }
