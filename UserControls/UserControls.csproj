@@ -63,6 +63,7 @@
     <Compile Include="ucsChooseLocation.Designer.cs">
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultFormats\SearchResultData.cs" />
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,6 +145,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ulsan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
+    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
+      <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
+      <Name>RestaurantDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

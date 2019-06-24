@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,20 @@ namespace RestaurantFinder
             //string people = txbNumberOfPeople.Text = "6";
 
             //MessageBox.Show($"{store}\n{name}\n{phone}\n{date}\n{people} 명");
+
+            Reservation reservation = new Reservation();
+
+            
+            reservation.Store.Name = txbStoreName.Text;
+            reservation.Name = txbReservationName.Text;
+            reservation.PhoneNumber = txbPhoneNumber.Text;
+            reservation.ReservationOn = ReservationOn.Value;
+            reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

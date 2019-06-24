@@ -30,6 +30,7 @@
         {
             this.uscResultGrid1 = new UserControls.uscResultGrid();
             this.uscSearchBox1 = new UserControls.uscSearchBox();
+            this.ucsChooseLocation1 = new UserControls.ucsChooseLocation();
             this.SuspendLayout();
             // 
             // uscResultGrid1
@@ -50,11 +51,21 @@
             this.uscSearchBox1.TabIndex = 0;
             this.uscSearchBox1.SearchButtonHandler += new System.Action<object, RestaurantDB.DB_jun.SearchConditions>(this.UscSearchBox1_SearchButtonHandler);
             // 
+            // ucsChooseLocation1
+            // 
+            this.ucsChooseLocation1.buttons = null;
+            this.ucsChooseLocation1.Location = new System.Drawing.Point(0, 59);
+            this.ucsChooseLocation1.Maps = null;
+            this.ucsChooseLocation1.Name = "ucsChooseLocation1";
+            this.ucsChooseLocation1.Size = new System.Drawing.Size(291, 350);
+            this.ucsChooseLocation1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 462);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ucsChooseLocation1);
             this.Controls.Add(this.uscResultGrid1);
             this.Controls.Add(this.uscSearchBox1);
             this.Name = "MainForm";
@@ -65,6 +76,8 @@
         }
 
         #endregion
+
+        private UserControls.ucsChooseLocation ucsChooseLocation1;
 
         private UserControls.uscSearchBox uscSearchBox1;
         private UserControls.uscResultGrid uscResultGrid1;
