@@ -32,12 +32,11 @@ namespace RestaurantFinder
             uscResultGrid1.Refresh();
         }
 
-        //지도의 지역 선택시
-        private void UcsChooseLocation1_OnClickEventHandler(object arg1, int arg2)
+        private void UcsChooseLocation1_OnClickEventHandler(object obj)
         {
-            uscSearchBox1.InitCityCbb(arg2);
-            uscResultGrid1.PivotTable(arg2);
-            uscResultGrid1.Refresh();
+            uscSearchBox1.InitCityCbb();
+            uscResultGrid1.PivotTable();
+            uscSearchBox1.Refresh();
         }
     }
 }

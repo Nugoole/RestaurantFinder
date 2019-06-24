@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridResult = new System.Windows.Forms.DataGridView();
-            this.bdsResult = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.bdsResult = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsResult)).BeginInit();
             this.SuspendLayout();
@@ -81,10 +81,6 @@
             this.gridResult.TabIndex = 0;
             this.gridResult.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridResult_CellDoubleClick);
             // 
-            // bdsResult
-            // 
-            this.bdsResult.DataSource = typeof(UserControls.ResultFormats.SearchResultData);
-            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -92,7 +88,10 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(669, 12);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            // 
+            // bdsResult
+            // 
+            this.bdsResult.DataSource = typeof(UserControls.ResultFormats.SearchResultData);
             // 
             // uscResultGrid
             // 

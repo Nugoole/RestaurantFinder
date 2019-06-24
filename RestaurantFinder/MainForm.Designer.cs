@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucsChooseLocation1 = new UserControls.ucsChooseLocation();
             this.uscResultGrid1 = new UserControls.uscResultGrid();
             this.uscSearchBox1 = new UserControls.uscSearchBox();
+            this.ucsChooseLocation1 = new UserControls.ucsChooseLocation();
             this.SuspendLayout();
-            // 
-            // ucsChooseLocation1
-            // 
-            this.ucsChooseLocation1.buttons = null;
-            this.ucsChooseLocation1.Location = new System.Drawing.Point(-1, 1);
-            this.ucsChooseLocation1.Maps = null;
-            this.ucsChooseLocation1.Name = "ucsChooseLocation1";
-            this.ucsChooseLocation1.Size = new System.Drawing.Size(421, 536);
-            this.ucsChooseLocation1.TabIndex = 0;
-            this.ucsChooseLocation1.OnClickEventHandler += new System.Action<object, int>(this.UcsChooseLocation1_OnClickEventHandler);
             // 
             // uscResultGrid1
             // 
@@ -66,12 +56,21 @@
             this.uscSearchBox1.TabIndex = 0;
             this.uscSearchBox1.SearchButtonHandler += new System.Action<object, RestaurantDB.DB_jun.SearchConditions>(this.UscSearchBox1_SearchButtonHandler);
             // 
+            // ucsChooseLocation1
+            // 
+            this.ucsChooseLocation1.buttons = null;
+            this.ucsChooseLocation1.Location = new System.Drawing.Point(-1, 1);
+            this.ucsChooseLocation1.Maps = null;
+            this.ucsChooseLocation1.Name = "ucsChooseLocation1";
+            this.ucsChooseLocation1.Size = new System.Drawing.Size(421, 536);
+            this.ucsChooseLocation1.TabIndex = 0;
+            this.ucsChooseLocation1.OnClickEventHandler += new System.Action<object>(this.UcsChooseLocation1_OnClickEventHandler);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 549);
-            this.Controls.Add(this.ucsChooseLocation1);
             this.Controls.Add(this.uscResultGrid1);
             this.Controls.Add(this.uscSearchBox1);
             this.Name = "MainForm";
