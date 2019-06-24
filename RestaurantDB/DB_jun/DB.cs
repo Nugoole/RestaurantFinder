@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace RestaurantDB.DB_jun
 {
@@ -16,17 +17,28 @@ namespace RestaurantDB.DB_jun
 
         public static List<T> GetAll()
         {
-            using(RestaurantEntities context = new RestaurantEntities())
+            using (RestaurantEntities context = new RestaurantEntities())
             {
                 return context.Set<T>().ToList();
             }
         }
 
-        public static void Insert()
+        public static bool Insert(T reservation)
         {
-            using(DbContext context = new RestaurantEntities())
+            using (DbContext context = new RestaurantEntities())
             {
+                context.Set<T>().Add(reservation);
 
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    if (e != null)
+                        return false;
+                }
+                return true;
             }
         }
 

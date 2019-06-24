@@ -94,7 +94,7 @@
             this.ReservationOn.Name = "ReservationOn";
             this.ReservationOn.Size = new System.Drawing.Size(200, 21);
             this.ReservationOn.TabIndex = 10;
-            this.ReservationOn.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
+            this.ReservationOn.Value = new System.DateTime(2019, 6, 24, 17, 10, 1, 0);
             // 
             // label6
             // 
