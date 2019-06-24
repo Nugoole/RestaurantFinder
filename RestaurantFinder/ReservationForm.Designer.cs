@@ -76,6 +76,7 @@
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnMadeReservation
             // 
