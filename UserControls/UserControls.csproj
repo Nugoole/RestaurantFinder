@@ -50,8 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MapsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResultFormats\SearchResultData.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucsChooseLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucsChooseLocation.Designer.cs">
+      <DependentUpon>ucsChooseLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,6 +77,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucsChooseLocation.resx">
+      <DependentUpon>ucsChooseLocation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uscResultGrid.resx">
       <DependentUpon>uscResultGrid.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,16 +92,58 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
-    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
+    <None Include="Resources\Busan.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
-      <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
-      <Name>RestaurantDB</Name>
-    </ProjectReference>
+    <None Include="Resources\Chungbuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chungnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daegu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daejeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gangwon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gwangju.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyeongbuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyeonggi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyeongnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeju.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeonbuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeonnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sejong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seoul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ulsan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

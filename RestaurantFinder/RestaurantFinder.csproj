@@ -78,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +101,12 @@
   <ItemGroup>
     <ProjectReference Include="..\UserControls\UserControls.csproj">
       <Project>{9826664C-4AE5-4CD8-9E63-864218C89921}</Project>
+      <Name>UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UserControls\UserControls.csproj">
+      <Project>{9826664c-4ae5-4cd8-9e63-864218c89921}</Project>
       <Name>UserControls</Name>
     </ProjectReference>
   </ItemGroup>
