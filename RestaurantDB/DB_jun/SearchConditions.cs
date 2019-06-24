@@ -8,7 +8,9 @@ namespace RestaurantDB.DB_jun
 {
     public class SearchConditions
     {
-        public SearchConditions()
+        private static SearchConditions _condition = null;
+
+        private SearchConditions()
         {
             FoodTypeIds = new List<int>();
             KeyWord = null;
@@ -16,10 +18,23 @@ namespace RestaurantDB.DB_jun
             StateId = 0;
         }
 
-        public int StateId { get; set; }
-        public List<int> FoodTypeIds { get; set; }
-        public string KeyWord { get; set; }
-        public int CityId { get; set; }
+        public static SearchConditions Condition
+        {
+            get
+            {
+                if(_condition == null)
+                {
+                    _condition = new SearchConditions();
+                }
+
+                return _condition;
+            }
+         }
+
+        public int StateId;
+        public List<int> FoodTypeIds;
+        public string KeyWord;
+        public int CityId;
     }
 
 }

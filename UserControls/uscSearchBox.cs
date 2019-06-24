@@ -27,19 +27,18 @@ namespace UserControls
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            SearchConditions conditions = new SearchConditions();
             foreach (var item in Controls[0].Controls)
             {
                 if (item.GetType() == typeof(CheckBox))
                     if ((item as CheckBox).Checked)
-                        conditions.FoodTypeIds.Add(int.Parse((item as CheckBox).Tag.ToString()));
+                        SearchConditions.Condition.FoodTypeIds.Add(int.Parse((item as CheckBox).Tag.ToString()));
             }
 
-            conditions.CityId = (int)cbbCity.SelectedValue;
+            SearchConditions.Condition.CityId = (int)cbbCity.SelectedValue;
             if(txbKeyword.Text != "")
-                conditions.KeyWord = txbKeyword.Text;
+                SearchConditions.Condition.KeyWord = txbKeyword.Text;
 
-            OnSearchButtonClicked(conditions);
+            OnSearchButtonClicked(SearchConditions.Condition);
         }
 
         #region SearchButtonClicked
@@ -51,10 +50,9 @@ namespace UserControls
         }
         private SearchConditions OnSearchButtonClicked()
         {
-            SearchConditions args = new SearchConditions();
-            OnSearchButtonClicked(args);
+            OnSearchButtonClicked(SearchConditions.Condition);
 
-            return args;
+            return SearchConditions.Condition;
         }
         #endregion
     }

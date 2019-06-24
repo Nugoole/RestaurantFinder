@@ -57,6 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ResultFormats\PivotResultData.cs" />
     <Compile Include="ucsChooseLocation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,6 +65,12 @@
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="ResultFormats\SearchResultData.cs" />
+    <Compile Include="uscPivot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscPivot.Designer.cs">
+      <DependentUpon>uscPivot.cs</DependentUpon>
+    </Compile>
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucsChooseLocation.resx">
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscPivot.resx">
+      <DependentUpon>uscPivot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uscResultGrid.resx">
       <DependentUpon>uscResultGrid.cs</DependentUpon>
@@ -148,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
     <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
     <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
   </ItemGroup>
