@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,6 +10,8 @@ using System.Windows.Forms;
 using UserControls.Properties;
 using System.Globalization;
 using System.Collections;
+using RestaurantDB.DB_jun;
+using RestaurantDB;
 
 namespace UserControls
 {
@@ -21,50 +22,57 @@ namespace UserControls
             InitializeComponent();
         }
         public List<Button> buttons { get; set; }
-        public List<MapData> Maps { get; set; }
+        public List<MapsData> Maps { get; set; }
         public void BitmapNButtonsInit()
         {
+
             buttons = new List<Button>();
 
-            buttons.Add(btnSeoul);
-            buttons.Add(btnBusan);
-            buttons.Add(btnIncheon);
-            buttons.Add(btnDaegu);
-            buttons.Add(btnGwangju);
-            buttons.Add(btnDaejeon);
-            buttons.Add(btnUlsan);
-            buttons.Add(btnSejong);
-            buttons.Add(btnGyeonggi);
-            buttons.Add(btnGangwon);
-            buttons.Add(btnChungbuk);
-            buttons.Add(btnChungnam);
-            buttons.Add(btnGyeongbuk);
-            buttons.Add(btnGyeongnam);
-            buttons.Add(btnJeonbuk);
-            buttons.Add(btnJeonnam);
-            buttons.Add(btnJeju);
+            foreach (var item in Controls)
+            {
+                if (item.GetType() == typeof(Button))
+                    buttons.Add(item as Button);
+            }
+
+
+
+            //buttons.Add(btnSeoul);
+            //buttons.Add(btnBusan);
+            //buttons.Add(btnIncheon);
+            //buttons.Add(btnDaegu);
+            //buttons.Add(btnGwangju);
+            //buttons.Add(btnDaejeon);
+            //buttons.Add(btnUlsan);
+            //buttons.Add(btnSejong);
+            //buttons.Add(btnGyeonggi);
+            //buttons.Add(btnGangwon);
+            //buttons.Add(btnChungbuk);
+            //buttons.Add(btnChungnam);
+            //buttons.Add(btnGyeongbuk);
+            //buttons.Add(btnGyeongnam);
+            //buttons.Add(btnJeonbuk);
+            //buttons.Add(btnJeonnam);
+            //buttons.Add(btnJeju);
         }
 
         private void UcsChooseLocation_Load(object sender, EventArgs e)
         {
             if (!DesignMode)
             {
-
                 BitmapNButtonsInit();
                 buttons.ForEach(x => x.MouseEnter += OnMouseEnter);
                 buttons.ForEach(x => x.MouseLeave += OnMouseLeave);
                 buttons.ForEach(x => x.Click += OnButtonClick);
 
                 pictureBox.Image = Resources.전국지도;
-                Maps = new List<MapData>();
                 Maps = Resources.ResourceManager
                            .GetResourceSet(CultureInfo.CurrentCulture, true, true)
                            .Cast<DictionaryEntry>()
                            .Where(x => x.Value.GetType() == typeof(Bitmap))
-                           .Select(x => new MapData
+                           .Select(x => new MapsData
                            {
                                Name = x.Key.ToString(),
-                               bitmap = (Bitmap)x.Value
+                               Image = (Bitmap)x.Value
                            })
                            .ToList();
             }
@@ -77,9 +85,8 @@ namespace UserControls
             foreach (var map in Maps)
             {
                 if (map.Name == button.Text)
-                    pictureBox.Image = map.bitmap;
+                    pictureBox.Image = map.Image;
             }
-
         }
 
         private void OnMouseLeave(object sender, EventArgs e)
@@ -87,24 +94,53 @@ namespace UserControls
             pictureBox.Image = Resources.전국지도;
         }
 
+        private bool buttonWasClicked = false;
+
         private void OnButtonClick(object sender, EventArgs e)
         {
             Button button = sender as Button;
 
-            foreach (var x in buttons)
+            buttonWasClicked = true;
+
+            foreach (var map in Maps)
             {
-                if (button.Text == x.Text)
+                if (button.Text == map.Name && buttonWasClicked)
                 {
-                    //CitySelect form = new CitySelect(x.Text);
-                    //form.ShowDialog();
+                    pictureBox.Image = map.Image;
+                    buttons.ForEach(x => x.MouseEnter -= OnMouseEnter);
+                    buttons.ForEach(x => x.MouseLeave -= OnMouseLeave);
                 }
             }
 
+            int stateId = DB<State>.GetAll().Where(x => x.Name == button.Text).Select(x => x.StateId).ToList()[0];
+            _OnClick(stateId);
         }
 
         private void PictureBox_Click(object sender, EventArgs e)
         {
-
+            pictureBox.Image = Resources.전국지도;
+            buttons.ForEach(x => x.MouseEnter += OnMouseEnter);
+            buttons.ForEach(x => x.MouseLeave += OnMouseLeave);
         }
+
+
+        #region OnClickEvent
+        public event Action<object, int> OnClickEventHandler;
+        protected virtual void _OnClick(int e)
+        {
+            if (OnClickEventHandler != null)
+                OnClickEventHandler(this, e);
+        }
+        private int _OnClick()
+        {
+            int args = new int();
+            _OnClick(args);
+
+            return args;
+        }
+        #endregion
     }
+
+
+
 }

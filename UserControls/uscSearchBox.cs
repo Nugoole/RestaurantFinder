@@ -21,8 +21,45 @@ namespace UserControls
 
         private void UscSearchBox_Load(object sender, EventArgs e)
         {
-            if(!DesignMode)
-                bdsCity.DataSource = DB<City>.GetAll();
+            InitCityCbb(0);
         }
+
+        public void InitCityCbb(int stateId)
+        {
+            if (!DesignMode || stateId == 0)
+                bdsCity.DataSource = DB<City>.GetAll().Where(x=>x.StateId == stateId).ToList();
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            SearchConditions.Condition.FoodTypeIds.Clear();
+            foreach (var item in Controls[0].Controls)
+            {
+                if (item.GetType() == typeof(CheckBox))
+                    if ((item as CheckBox).Checked)
+                        SearchConditions.Condition.FoodTypeIds.Add(int.Parse((item as CheckBox).Tag.ToString()));
+            }
+
+            SearchConditions.Condition.CityId = (int)cbbCity.SelectedValue;
+            if(txbKeyword.Text != "")
+                SearchConditions.Condition.KeyWord = txbKeyword.Text;
+
+            OnSearchButtonClicked(SearchConditions.Condition);
+        }
+
+        #region SearchButtonClicked
+        public event Action<object, SearchConditions> SearchButtonHandler;
+        protected virtual void OnSearchButtonClicked(SearchConditions e)
+        {
+            if (SearchButtonHandler != null)
+                SearchButtonHandler(this, e);
+        }
+        private SearchConditions OnSearchButtonClicked()
+        {
+            OnSearchButtonClicked(SearchConditions.Condition);
+
+            return SearchConditions.Condition;
+        }
+        #endregion
     }
 }

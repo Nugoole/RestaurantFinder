@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -43,8 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapData.cs" />
+    <Compile Include="funcsForPivot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResultFormats\MapsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultFormats\PivotResultData.cs" />
+    <Compile Include="ucsChooseLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucsChooseLocation.Designer.cs">
+      <DependentUpon>ucsChooseLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResultFormats\SearchResultData.cs" />
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
@@ -60,6 +82,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucsChooseLocation.resx">
+      <DependentUpon>ucsChooseLocation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uscResultGrid.resx">
       <DependentUpon>uscResultGrid.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,14 +97,72 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Busan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chungbuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chungnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daegu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daejeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gangwon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gwangju.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyeongbuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyeonggi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyeongnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeju.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeonbuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeonnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sejong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seoul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ulsan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
+    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
       <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
       <Name>RestaurantDB</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\DataSources\RestaurantDB.City.datasource" />
-    <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

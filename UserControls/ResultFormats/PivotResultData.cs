@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantDB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace UserControls.ResultFormats
 {
-    public class SearchResultData
+    class PivotResultData
     {
-        public string Name { get; set; }
-        public string Outline { get; set; }
+        public City cities { get; set; }
+        public int MyProperty { get; set; }
     }
 }
