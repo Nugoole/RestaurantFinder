@@ -31,10 +31,10 @@ namespace RestaurantDB.DB_jun
             }
          }
 
-        public int StateId;
-        public List<int> FoodTypeIds;
-        public string KeyWord;
-        public int CityId;
+        public int StateId { get; set; }
+        public List<int> FoodTypeIds { get; set; }
+        public string KeyWord { get; set; }
+        public int CityId { get; set; }
     }
 
 }

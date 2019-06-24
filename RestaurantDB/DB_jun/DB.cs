@@ -27,6 +27,7 @@ namespace RestaurantDB.DB_jun
         {
             using (DbContext context = new RestaurantEntities())
             {
+                
                 context.Set<T>().Add(reservation);
 
                 try
