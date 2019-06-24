@@ -29,7 +29,15 @@ namespace RestaurantFinder
         private void UscSearchBox1_SearchButtonHandler(object arg1, RestaurantDB.DB_jun.SearchConditions arg2)
         {
             uscResultGrid1.Searched(arg2);
-            uscResultGrid1.ResumeLayout();
+            uscResultGrid1.Refresh();
+        }
+
+        //지도의 지역 선택시
+        private void UcsChooseLocation1_OnClickEventHandler(object arg1, int arg2)
+        {
+            uscSearchBox1.InitCityCbb(arg2);
+            uscResultGrid1.PivotTable(arg2);
+            uscResultGrid1.Refresh();
         }
     }
 }

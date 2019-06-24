@@ -51,24 +51,35 @@ namespace UserControls
                     DBbase = DBbase.Where(x => x.Outline.Contains(conditions.KeyWord)).ToList();
                 }
 
+                var DBbase2 = from x in DBbase
+                              select new
+                              {
+                                  Name = x.Name,
+                                  Outline = x.Outline
+                              };
+
                 //추려낸 결과 소스로 이동
-                bdsResult.DataSource = DBbase;
+                gridResult.Columns.Clear();
+                
+                bdsResult.DataSource = DBbase2;
+                gridResult.DataSource = bdsResult;
+                gridResult.Refresh();
                 label1.Text = $"총 {DBbase.Count()}개의 검색 결과";
             }
         }
 
         private void UscResultGrid_Load(object sender, EventArgs e)
         {
-            if (!DesignMode)
-            {
-                bdsResult.DataSource = DB<Store>.GetAll().Select(x => new SearchResultData
-                {
-                    Name = x.Name,
-                    Outline = x.Outline
-                }).ToList();
+            //if (!DesignMode)
+            //{
+            //    bdsResult.DataSource = DB<Store>.GetAll().Select(x => new SearchResultData
+            //    {
+            //        Name = x.Name,
+            //        Outline = x.Outline
+            //    }).ToList();
 
-                label1.Text = $"총 {DB<Store>.GetAll().Count()}개의 검색 결과";
-            }
+            //    label1.Text = $"총 {DB<Store>.GetAll().Count()}개의 검색 결과";
+            //}
         }
 
         //셀 더블클릭시 해당 셀의 정보를 핸들러에 넘겨줌
@@ -101,10 +112,5 @@ namespace UserControls
             return args;
         }
         #endregion
-
-        private void GridResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

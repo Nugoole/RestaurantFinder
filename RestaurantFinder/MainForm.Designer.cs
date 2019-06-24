@@ -41,6 +41,7 @@
             this.ucsChooseLocation1.Name = "ucsChooseLocation1";
             this.ucsChooseLocation1.Size = new System.Drawing.Size(421, 536);
             this.ucsChooseLocation1.TabIndex = 0;
+            this.ucsChooseLocation1.OnClickEventHandler += new System.Action<object, int>(this.UcsChooseLocation1_OnClickEventHandler);
             // 
             // uscResultGrid1
             // 

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using UserControls.Properties;
 using System.Globalization;
 using System.Collections;
+using RestaurantDB.DB_jun;
+using RestaurantDB;
 
 namespace UserControls
 {
@@ -30,23 +32,31 @@ namespace UserControls
 
             buttons = new List<Button>();
 
-            buttons.Add(btnSeoul);
-            buttons.Add(btnBusan);
-            buttons.Add(btnIncheon);
-            buttons.Add(btnDaegu);
-            buttons.Add(btnGwangju);
-            buttons.Add(btnDaejeon);
-            buttons.Add(btnUlsan);
-            buttons.Add(btnSejong);
-            buttons.Add(btnGyeonggi);
-            buttons.Add(btnGangwon);
-            buttons.Add(btnChungbuk);
-            buttons.Add(btnChungnam);
-            buttons.Add(btnGyeongbuk);
-            buttons.Add(btnGyeongnam);
-            buttons.Add(btnJeonbuk);
-            buttons.Add(btnJeonnam);
-            buttons.Add(btnJeju);
+            foreach (var item in Controls)
+            {
+                if (item.GetType() == typeof(Button))
+                    buttons.Add(item as Button);
+            }
+
+
+
+            //buttons.Add(btnSeoul);
+            //buttons.Add(btnBusan);
+            //buttons.Add(btnIncheon);
+            //buttons.Add(btnDaegu);
+            //buttons.Add(btnGwangju);
+            //buttons.Add(btnDaejeon);
+            //buttons.Add(btnUlsan);
+            //buttons.Add(btnSejong);
+            //buttons.Add(btnGyeonggi);
+            //buttons.Add(btnGangwon);
+            //buttons.Add(btnChungbuk);
+            //buttons.Add(btnChungnam);
+            //buttons.Add(btnGyeongbuk);
+            //buttons.Add(btnGyeongnam);
+            //buttons.Add(btnJeonbuk);
+            //buttons.Add(btnJeonnam);
+            //buttons.Add(btnJeju);
         }
 
         private void UcsChooseLocation_Load(object sender, EventArgs e)
@@ -106,6 +116,9 @@ namespace UserControls
                     buttons.ForEach(x => x.MouseLeave -= OnMouseLeave);
                 }
             }
+
+            int stateId = DB<State>.GetAll().Where(x => x.Name == button.Text).Select(x => x.StateId).ToList()[0];
+            _OnClick(stateId);
         }
 
         private void PictureBox_Click(object sender, EventArgs e)
@@ -114,5 +127,25 @@ namespace UserControls
             buttons.ForEach(x => x.MouseEnter += OnMouseEnter);
             buttons.ForEach(x => x.MouseLeave += OnMouseLeave);
         }
+
+
+        #region OnClickEvent
+        public event Action<object, int> OnClickEventHandler;
+        protected virtual void _OnClick(int e)
+        {
+            if (OnClickEventHandler != null)
+                OnClickEventHandler(this, e);
+        }
+        private int _OnClick()
+        {
+            int args = new int();
+            _OnClick(args);
+
+            return args;
+        }
+        #endregion
     }
+
+
+
 }
