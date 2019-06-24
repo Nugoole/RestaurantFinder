@@ -31,23 +31,28 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridResult = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outlineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdsResult = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsResult)).BeginInit();
             this.SuspendLayout();
             // 
             // gridResult
             // 
+            this.gridResult.AllowUserToAddRows = false;
+            this.gridResult.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gridResult.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridResult.AutoGenerateColumns = false;
+            this.gridResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.gridResult.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -62,38 +67,26 @@
             this.nameDataGridViewTextBoxColumn,
             this.outlineDataGridViewTextBoxColumn});
             this.gridResult.DataSource = this.bdsResult;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridResult.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridResult.Location = new System.Drawing.Point(0, 0);
             this.gridResult.MultiSelect = false;
             this.gridResult.Name = "gridResult";
             this.gridResult.ReadOnly = true;
             this.gridResult.RowHeadersVisible = false;
-            this.gridResult.RowTemplate.Height = 23;
+            this.gridResult.RowTemplate.Height = 46;
+            this.gridResult.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gridResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridResult.Size = new System.Drawing.Size(669, 321);
             this.gridResult.TabIndex = 0;
             this.gridResult.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridResult_CellDoubleClick);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 30F;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "가게 이름";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // outlineDataGridViewTextBoxColumn
-            // 
-            this.outlineDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.outlineDataGridViewTextBoxColumn.DataPropertyName = "Outline";
-            this.outlineDataGridViewTextBoxColumn.HeaderText = "설명";
-            this.outlineDataGridViewTextBoxColumn.Name = "outlineDataGridViewTextBoxColumn";
-            this.outlineDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bdsResult
-            // 
-            this.bdsResult.DataSource = typeof(UserControls.ResultFormats.SearchResultData);
             // 
             // label1
             // 
@@ -103,6 +96,28 @@
             this.label1.Size = new System.Drawing.Size(669, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 32.99492F;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "가게 이름";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // outlineDataGridViewTextBoxColumn
+            // 
+            this.outlineDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.outlineDataGridViewTextBoxColumn.DataPropertyName = "Outline";
+            this.outlineDataGridViewTextBoxColumn.FillWeight = 97.00508F;
+            this.outlineDataGridViewTextBoxColumn.HeaderText = "설명";
+            this.outlineDataGridViewTextBoxColumn.Name = "outlineDataGridViewTextBoxColumn";
+            this.outlineDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bdsResult
+            // 
+            this.bdsResult.DataSource = typeof(UserControls.ResultFormats.SearchResultData);
             // 
             // uscResultGrid
             // 
@@ -123,8 +138,8 @@
 
         private System.Windows.Forms.DataGridView gridResult;
         private System.Windows.Forms.BindingSource bdsResult;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn outlineDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
     }
 }
