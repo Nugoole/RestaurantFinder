@@ -33,26 +33,6 @@ namespace UserControls
                 if (item.GetType() == typeof(Button))
                     buttons.Add(item as Button);
             }
-
-
-
-            //buttons.Add(btnSeoul);
-            //buttons.Add(btnBusan);
-            //buttons.Add(btnIncheon);
-            //buttons.Add(btnDaegu);
-            //buttons.Add(btnGwangju);
-            //buttons.Add(btnDaejeon);
-            //buttons.Add(btnUlsan);
-            //buttons.Add(btnSejong);
-            //buttons.Add(btnGyeonggi);
-            //buttons.Add(btnGangwon);
-            //buttons.Add(btnChungbuk);
-            //buttons.Add(btnChungnam);
-            //buttons.Add(btnGyeongbuk);
-            //buttons.Add(btnGyeongnam);
-            //buttons.Add(btnJeonbuk);
-            //buttons.Add(btnJeonnam);
-            //buttons.Add(btnJeju);
         }
 
         private void UcsChooseLocation_Load(object sender, EventArgs e)
@@ -112,8 +92,8 @@ namespace UserControls
                 }
             }
 
-            int stateId = DB<State>.GetAll().Where(x => x.Name == button.Text).Select(x => x.StateId).ToList()[0];
-            _OnClick(stateId);
+            SearchConditions.Condition.StateId = DB<State>.GetAll().Where(x => x.Name == button.Text).Select(x => x.StateId).ToList()[0];
+            _OnClick();
         }
 
         private void PictureBox_Click(object sender, EventArgs e)
@@ -125,18 +105,11 @@ namespace UserControls
 
 
         #region OnClickEvent
-        public event Action<object, int> OnClickEventHandler;
-        protected virtual void _OnClick(int e)
+        public event Action<object> OnClickEventHandler;
+        protected virtual void _OnClick()
         {
             if (OnClickEventHandler != null)
-                OnClickEventHandler(this, e);
-        }
-        private int _OnClick()
-        {
-            int args = new int();
-            _OnClick(args);
-
-            return args;
+                OnClickEventHandler(this);
         }
         #endregion
     }

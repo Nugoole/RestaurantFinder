@@ -21,13 +21,13 @@ namespace UserControls
 
         private void UscSearchBox_Load(object sender, EventArgs e)
         {
-            InitCityCbb(0);
+            InitCityCbb();
         }
 
-        public void InitCityCbb(int stateId)
+        public void InitCityCbb()
         {
-            if (!DesignMode || stateId == 0)
-                bdsCity.DataSource = DB<City>.GetAll().Where(x=>x.StateId == stateId).ToList();
+            if (!DesignMode || SearchConditions.Condition.StateId != 0)
+                bdsCity.DataSource = DB<City>.GetAll().Where(x=>x.StateId == SearchConditions.Condition.StateId).ToList();            
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
