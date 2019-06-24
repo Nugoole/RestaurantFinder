@@ -101,8 +101,8 @@
   <ItemGroup>
     <Content Include="Restaurant.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Restaurant.Context.cs</LastGenOutput>
       <DependentUpon>Restaurant.edmx</DependentUpon>
+      <LastGenOutput>Restaurant.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Restaurant.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

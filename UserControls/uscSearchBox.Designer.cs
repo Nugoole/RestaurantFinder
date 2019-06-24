@@ -200,7 +200,7 @@
             this.cbbCity.Name = "cbbCity";
             this.cbbCity.Size = new System.Drawing.Size(111, 20);
             this.cbbCity.TabIndex = 2;
-            this.cbbCity.ValueMember = "Id";
+            this.cbbCity.ValueMember = "CityId";
             // 
             // bdsCity
             // 

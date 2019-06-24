@@ -61,7 +61,7 @@ namespace UserControls
         {
             if (!DesignMode)
             {
-                bdsResult.DataSource = DB<Store>.GetAll().Select(x => new ResultFormats.SearchResultData
+                bdsResult.DataSource = DB<Store>.GetAll().Select(x => new SearchResultData
                 {
                     Name = x.Name,
                     Outline = x.Outline
@@ -74,12 +74,15 @@ namespace UserControls
         //셀 더블클릭시 해당 셀의 정보를 핸들러에 넘겨줌
         private void GridResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            SearchResultData searchResultData = gridResult.CurrentRow.DataBoundItem as SearchResultData;
+            if (!DesignMode)
+            {
+                SearchResultData searchResultData = gridResult.CurrentRow.DataBoundItem as SearchResultData;
 
-            if (searchResultData == null)
-                return;
+                if (searchResultData == null)
+                    return;
 
-            OnCellDoubleClickd(searchResultData);
+                OnCellDoubleClickd(searchResultData);
+            }
         }
 
         //이벤트 정의

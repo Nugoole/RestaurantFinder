@@ -16,7 +16,7 @@ namespace RestaurantDB.DB_jun
 
         public static List<T> GetAll()
         {
-            using(DbContext context = new RestaurantEntities())
+            using(RestaurantEntities context = new RestaurantEntities())
             {
                 return context.Set<T>().ToList();
             }
