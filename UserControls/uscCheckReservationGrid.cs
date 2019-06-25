@@ -23,15 +23,15 @@ namespace UserControls
         {
             if(!DesignMode)
             {
-                var reservationDB = DB.Reservation.GetAll();
-
-                reservationDB.Select(x => new
+                var reservationDB = DB.Reservation.GetReservationList(phoneNumber).Select(x => new
                 {
-                    ReservationName = x.Name,
-                    StoreName = x.Store.Name,
-                    x.ReservationOn,
-                    x.NumberOfPeople
-                });
+                    Name = x.Name,
+                    StoreName = x.StoreName,
+                    Date = x.ReservationOn,
+                    People = x.NumberOfPeople
+                }).ToList();
+                dataGridView1.DataSource = reservationDB;
+                
             }
         }
     }

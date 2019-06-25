@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckReservationConditon.cs" />
+    <Compile Include="CheckReservationEventArgs.cs" />
     <Compile Include="funcsForPivot.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +76,12 @@
     <Compile Include="uscCheckReservationGrid.Designer.cs">
       <DependentUpon>uscCheckReservationGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="uscReservationCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscReservationCheckBox.Designer.cs">
+      <DependentUpon>uscReservationCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uscCheckReservationGrid.resx">
       <DependentUpon>uscCheckReservationGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscReservationCheckBox.resx">
+      <DependentUpon>uscReservationCheckBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uscResultGrid.resx">
       <DependentUpon>uscResultGrid.cs</DependentUpon>
@@ -168,13 +178,13 @@
     <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
       <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
       <Name>RestaurantDB</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
