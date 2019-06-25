@@ -14,7 +14,7 @@ namespace RestaurantDB.Data
             using (RestaurantEntities context = new RestaurantEntities())
             {
                 var query = from x in context.States
-                            where x.Name == text
+                            where x.Name.Contains(text)
                             select x.StateId;
 
                 return query.FirstOrDefault();

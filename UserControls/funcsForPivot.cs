@@ -21,7 +21,7 @@ namespace UserControls
                 RestaurantEntities context = new RestaurantEntities();
 
                 var foodTypes = context.FoodTypes.Select(x => x.Name).ToList();
-                var query = from x in context.Stores.ToList()
+                var query = from x in context.Stores
                             where x.StateId == SearchConditions.Condition.StateId                       //시.도 필터
                             group x by x.City.Name into nameGroup
                             select new

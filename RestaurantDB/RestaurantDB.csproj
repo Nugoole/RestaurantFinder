@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Restaurant.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ResultFormat\CityListFormat.cs" />
     <Compile Include="ResultFormat\MapsData.cs" />
     <Compile Include="ResultFormat\PivotResultData.cs" />
     <Compile Include="ResultFormat\SearchResultData.cs" />

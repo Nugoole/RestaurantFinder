@@ -1,4 +1,5 @@
 ﻿using RestaurantDB.DB_jun;
+using RestaurantDB.ResultFormat;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,20 @@ namespace RestaurantDB.Data
 {
     public class CityData : EntityData<City>
     {
-        public List<string> GetAllCitiesIn(int stateId)
+        public List<CityListFormat> GetAllCitiesIn(int stateId)
         {
             using(RestaurantEntities context = new RestaurantEntities())
             {
-                var query = from x in context.Cities
+                var query = from x in context.Stores
                             where x.StateId == stateId
-                            select x.Name;
+                            select new CityListFormat
+                            {
+                                CityId = x.CityId,
+                                Name = x.City.Name
+                            };
 
                 
-                return query.ToList();
+                return query.Distinct().ToList();
             }
         }
     }

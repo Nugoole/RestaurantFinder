@@ -64,11 +64,11 @@
             // btnJeju
             // 
             this.btnJeju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnJeju.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnJeju.Location = new System.Drawing.Point(260, 375);
+            this.btnJeju.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnJeju.Location = new System.Drawing.Point(247, 373);
             this.btnJeju.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJeju.Name = "btnJeju";
-            this.btnJeju.Size = new System.Drawing.Size(54, 27);
+            this.btnJeju.Size = new System.Drawing.Size(60, 27);
             this.btnJeju.TabIndex = 35;
             this.btnJeju.Text = "제주도";
             this.btnJeju.UseVisualStyleBackColor = true;
@@ -76,11 +76,11 @@
             // btnJeonnam
             // 
             this.btnJeonnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnJeonnam.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnJeonnam.Location = new System.Drawing.Point(320, 344);
+            this.btnJeonnam.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnJeonnam.Location = new System.Drawing.Point(307, 342);
             this.btnJeonnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJeonnam.Name = "btnJeonnam";
-            this.btnJeonnam.Size = new System.Drawing.Size(54, 27);
+            this.btnJeonnam.Size = new System.Drawing.Size(60, 27);
             this.btnJeonnam.TabIndex = 34;
             this.btnJeonnam.Text = "전라남도";
             this.btnJeonnam.UseVisualStyleBackColor = true;
@@ -88,11 +88,11 @@
             // btnJeonbuk
             // 
             this.btnJeonbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnJeonbuk.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnJeonbuk.Location = new System.Drawing.Point(260, 344);
+            this.btnJeonbuk.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnJeonbuk.Location = new System.Drawing.Point(247, 342);
             this.btnJeonbuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJeonbuk.Name = "btnJeonbuk";
-            this.btnJeonbuk.Size = new System.Drawing.Size(54, 27);
+            this.btnJeonbuk.Size = new System.Drawing.Size(60, 27);
             this.btnJeonbuk.TabIndex = 33;
             this.btnJeonbuk.Text = "전라북도";
             this.btnJeonbuk.UseVisualStyleBackColor = true;
@@ -100,11 +100,11 @@
             // btnGyeongnam
             // 
             this.btnGyeongnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGyeongnam.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGyeongnam.Location = new System.Drawing.Point(320, 313);
+            this.btnGyeongnam.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGyeongnam.Location = new System.Drawing.Point(307, 311);
             this.btnGyeongnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGyeongnam.Name = "btnGyeongnam";
-            this.btnGyeongnam.Size = new System.Drawing.Size(54, 27);
+            this.btnGyeongnam.Size = new System.Drawing.Size(60, 27);
             this.btnGyeongnam.TabIndex = 32;
             this.btnGyeongnam.Text = "경상남도";
             this.btnGyeongnam.UseVisualStyleBackColor = true;
@@ -112,11 +112,11 @@
             // btnGyeongbuk
             // 
             this.btnGyeongbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGyeongbuk.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGyeongbuk.Location = new System.Drawing.Point(260, 313);
+            this.btnGyeongbuk.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGyeongbuk.Location = new System.Drawing.Point(247, 311);
             this.btnGyeongbuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGyeongbuk.Name = "btnGyeongbuk";
-            this.btnGyeongbuk.Size = new System.Drawing.Size(54, 27);
+            this.btnGyeongbuk.Size = new System.Drawing.Size(60, 27);
             this.btnGyeongbuk.TabIndex = 31;
             this.btnGyeongbuk.Text = "경상북도";
             this.btnGyeongbuk.UseVisualStyleBackColor = true;
@@ -124,11 +124,11 @@
             // btnChungnam
             // 
             this.btnChungnam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChungnam.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnChungnam.Location = new System.Drawing.Point(320, 282);
+            this.btnChungnam.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChungnam.Location = new System.Drawing.Point(307, 280);
             this.btnChungnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChungnam.Name = "btnChungnam";
-            this.btnChungnam.Size = new System.Drawing.Size(54, 27);
+            this.btnChungnam.Size = new System.Drawing.Size(60, 27);
             this.btnChungnam.TabIndex = 30;
             this.btnChungnam.Text = "충청남도";
             this.btnChungnam.UseVisualStyleBackColor = true;
@@ -136,11 +136,11 @@
             // btnChungbuk
             // 
             this.btnChungbuk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChungbuk.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnChungbuk.Location = new System.Drawing.Point(260, 282);
+            this.btnChungbuk.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChungbuk.Location = new System.Drawing.Point(247, 280);
             this.btnChungbuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChungbuk.Name = "btnChungbuk";
-            this.btnChungbuk.Size = new System.Drawing.Size(54, 27);
+            this.btnChungbuk.Size = new System.Drawing.Size(60, 27);
             this.btnChungbuk.TabIndex = 29;
             this.btnChungbuk.Text = "충청북도";
             this.btnChungbuk.UseVisualStyleBackColor = true;
@@ -148,11 +148,11 @@
             // btnGangwon
             // 
             this.btnGangwon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGangwon.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGangwon.Location = new System.Drawing.Point(320, 251);
+            this.btnGangwon.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGangwon.Location = new System.Drawing.Point(307, 249);
             this.btnGangwon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGangwon.Name = "btnGangwon";
-            this.btnGangwon.Size = new System.Drawing.Size(54, 27);
+            this.btnGangwon.Size = new System.Drawing.Size(60, 27);
             this.btnGangwon.TabIndex = 28;
             this.btnGangwon.Text = "강원도";
             this.btnGangwon.UseVisualStyleBackColor = true;
@@ -160,11 +160,11 @@
             // btnGyeonggi
             // 
             this.btnGyeonggi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGyeonggi.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGyeonggi.Location = new System.Drawing.Point(260, 251);
+            this.btnGyeonggi.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGyeonggi.Location = new System.Drawing.Point(247, 249);
             this.btnGyeonggi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGyeonggi.Name = "btnGyeonggi";
-            this.btnGyeonggi.Size = new System.Drawing.Size(54, 27);
+            this.btnGyeonggi.Size = new System.Drawing.Size(60, 27);
             this.btnGyeonggi.TabIndex = 27;
             this.btnGyeonggi.Text = "경기도";
             this.btnGyeonggi.UseVisualStyleBackColor = true;
@@ -172,11 +172,11 @@
             // btnSejong
             // 
             this.btnSejong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSejong.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSejong.Location = new System.Drawing.Point(320, 220);
+            this.btnSejong.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSejong.Location = new System.Drawing.Point(307, 218);
             this.btnSejong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSejong.Name = "btnSejong";
-            this.btnSejong.Size = new System.Drawing.Size(54, 27);
+            this.btnSejong.Size = new System.Drawing.Size(60, 27);
             this.btnSejong.TabIndex = 26;
             this.btnSejong.Text = "세종";
             this.btnSejong.UseVisualStyleBackColor = true;
@@ -184,11 +184,11 @@
             // btnUlsan
             // 
             this.btnUlsan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUlsan.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUlsan.Location = new System.Drawing.Point(260, 220);
+            this.btnUlsan.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUlsan.Location = new System.Drawing.Point(247, 218);
             this.btnUlsan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUlsan.Name = "btnUlsan";
-            this.btnUlsan.Size = new System.Drawing.Size(54, 27);
+            this.btnUlsan.Size = new System.Drawing.Size(60, 27);
             this.btnUlsan.TabIndex = 25;
             this.btnUlsan.Text = "울산";
             this.btnUlsan.UseVisualStyleBackColor = true;
@@ -196,11 +196,11 @@
             // btnDaejeon
             // 
             this.btnDaejeon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDaejeon.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDaejeon.Location = new System.Drawing.Point(320, 189);
+            this.btnDaejeon.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDaejeon.Location = new System.Drawing.Point(307, 187);
             this.btnDaejeon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDaejeon.Name = "btnDaejeon";
-            this.btnDaejeon.Size = new System.Drawing.Size(54, 27);
+            this.btnDaejeon.Size = new System.Drawing.Size(60, 27);
             this.btnDaejeon.TabIndex = 24;
             this.btnDaejeon.Text = "대전";
             this.btnDaejeon.UseVisualStyleBackColor = true;
@@ -208,11 +208,11 @@
             // btnGwangju
             // 
             this.btnGwangju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGwangju.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGwangju.Location = new System.Drawing.Point(260, 189);
+            this.btnGwangju.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGwangju.Location = new System.Drawing.Point(247, 187);
             this.btnGwangju.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGwangju.Name = "btnGwangju";
-            this.btnGwangju.Size = new System.Drawing.Size(54, 27);
+            this.btnGwangju.Size = new System.Drawing.Size(60, 27);
             this.btnGwangju.TabIndex = 23;
             this.btnGwangju.Text = "광주";
             this.btnGwangju.UseVisualStyleBackColor = true;
@@ -220,11 +220,11 @@
             // btnDaegu
             // 
             this.btnDaegu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDaegu.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDaegu.Location = new System.Drawing.Point(320, 158);
+            this.btnDaegu.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDaegu.Location = new System.Drawing.Point(307, 156);
             this.btnDaegu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDaegu.Name = "btnDaegu";
-            this.btnDaegu.Size = new System.Drawing.Size(54, 27);
+            this.btnDaegu.Size = new System.Drawing.Size(60, 27);
             this.btnDaegu.TabIndex = 22;
             this.btnDaegu.Text = "대구";
             this.btnDaegu.UseVisualStyleBackColor = true;
@@ -232,11 +232,11 @@
             // btnIncheon
             // 
             this.btnIncheon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIncheon.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnIncheon.Location = new System.Drawing.Point(260, 158);
+            this.btnIncheon.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnIncheon.Location = new System.Drawing.Point(247, 156);
             this.btnIncheon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIncheon.Name = "btnIncheon";
-            this.btnIncheon.Size = new System.Drawing.Size(54, 27);
+            this.btnIncheon.Size = new System.Drawing.Size(60, 27);
             this.btnIncheon.TabIndex = 21;
             this.btnIncheon.Text = "인천";
             this.btnIncheon.UseVisualStyleBackColor = true;
@@ -244,11 +244,11 @@
             // btnBusan
             // 
             this.btnBusan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBusan.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnBusan.Location = new System.Drawing.Point(320, 127);
+            this.btnBusan.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnBusan.Location = new System.Drawing.Point(307, 125);
             this.btnBusan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBusan.Name = "btnBusan";
-            this.btnBusan.Size = new System.Drawing.Size(54, 27);
+            this.btnBusan.Size = new System.Drawing.Size(60, 27);
             this.btnBusan.TabIndex = 20;
             this.btnBusan.Text = "부산";
             this.btnBusan.UseVisualStyleBackColor = true;
@@ -256,11 +256,11 @@
             // btnSeoul
             // 
             this.btnSeoul.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSeoul.Font = new System.Drawing.Font("Gulim", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSeoul.Location = new System.Drawing.Point(260, 127);
+            this.btnSeoul.Font = new System.Drawing.Font("Gulim", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSeoul.Location = new System.Drawing.Point(247, 125);
             this.btnSeoul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeoul.Name = "btnSeoul";
-            this.btnSeoul.Size = new System.Drawing.Size(54, 27);
+            this.btnSeoul.Size = new System.Drawing.Size(60, 27);
             this.btnSeoul.TabIndex = 19;
             this.btnSeoul.Tag = "0";
             this.btnSeoul.Text = "서울";

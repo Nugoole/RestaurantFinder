@@ -39,5 +39,21 @@ namespace RestaurantFinder
             reservation.ShowDialog();
         }
 
+        private void 예약내역확인ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckReservationForm form = new CheckReservationForm();
+            form.Show();
+        }
+
+        private void 종료XToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                MessageBox.Show("Enter input");
+        }
     }
 }

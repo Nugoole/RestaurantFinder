@@ -16,7 +16,7 @@ namespace RestaurantFinder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckReservationForm());
+            Application.Run(new MainForm());
         }
     }
 }

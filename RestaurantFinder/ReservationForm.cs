@@ -22,11 +22,10 @@ namespace RestaurantFinder
         {
             Reservation reservation = new Reservation();
 
-            //TODO
-            //reservation.StoreId = EntityData<Store>.GetAll().Where(x => x.Name == txbStoreName.Text).Select(x=>x.StoreId).ToList()[0];
+            reservation.StoreId = DB.Store.FindStoreId(txbStoreName.Text);
             reservation.Name = txbReservationName.Text;
             reservation.PhoneNumber = txbPhoneNumber.Text;
-            reservation.ReservationOn = ReservationOn.Value+ new TimeSpan(3, 0, 0);
+            reservation.ReservationOn = ReservationOn.Value;
             
             reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
 
