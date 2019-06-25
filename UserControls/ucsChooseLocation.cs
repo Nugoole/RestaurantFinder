@@ -81,7 +81,6 @@ namespace UserControls
         private bool buttonWasClicked = false;
 
         private void OnButtonClick(object sender, EventArgs e)
-        private void OnButtonClick(object sender, EventArgs e)
         {
             Button button = sender as Button;
 
