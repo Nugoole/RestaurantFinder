@@ -37,19 +37,5 @@ namespace RestaurantFinder
             ReservationForm reservation = new ReservationForm(arg2);
             reservation.ShowDialog();
         }
-
-        //검색버튼 클릭 시 발생할 함수
-        private void UscSearchBox1_SearchButtonHandler(object arg1, RestaurantDB.DB_jun.SearchConditions arg2)
-        {
-            uscResultGrid1.Searched(arg2);
-            uscResultGrid1.Refresh();
-        }
-
-        private void UcsChooseLocation1_OnClickEventHandler(object obj)
-        {
-            uscSearchBox1.InitCityCbb();
-            uscResultGrid1.PivotTable();
-            uscSearchBox1.Refresh();
-        }
     }
 }

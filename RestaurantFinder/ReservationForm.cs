@@ -27,14 +27,6 @@ namespace RestaurantFinder
 
         private void BtnMadeReservation_Click(object sender, EventArgs e)
         {
-            //ReservitonData reservitonData = new ReservitonData();
-
-            //reservitonData.StoreName = txbStoreName.Text;
-            //reservitonData.ResetvationName = txbReservationName.Text;
-            //reservitonData.PhoneNumber = txbPhoneNumber.Text;
-            //reservitonData.ReservationOn = ReservationOn.Value;
-            //reservitonData.NumberOfPeople = txbNumberOfPeople.Text;
-
             Reservation reservation = new Reservation();
 
             reservation.StoreId = DB<Store>.GetAll().Where(x => x.Name == txbStoreName.Text).Select(x=>x.StoreId).ToList()[0];
@@ -50,21 +42,6 @@ namespace RestaurantFinder
                 MessageBox.Show("입력실패");
         }
 
-            //MessageBox.Show($"{store}\n{name}\n{phone}\n{date}\n{people} 명");
-
-            Reservation reservation = new Reservation();
-
-            
-            reservation.Store.Name = txbStoreName.Text;
-            reservation.Name = txbReservationName.Text;
-            reservation.PhoneNumber = txbPhoneNumber.Text;
-            reservation.ReservationOn = ReservationOn.Value;
-            reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
-        }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
