@@ -18,11 +18,12 @@ namespace RestaurantFinder
         }
 
         //검색버튼 클릭 시 발생할 함수
-        private void UscSearchBox1_SearchButtonHandler(object arg1, RestaurantDB.DB_jun.SearchConditions arg2)
+        private void UscSearchBox1_SearchButtonHandler(object obj)
         {
-            uscResultGrid1.Searched(arg2);
+            uscResultGrid1.Searched();
             uscResultGrid1.Refresh();
         }
+
         //지도 버튼 클릭 시 발생할 함수
         private void UcsChooseLocation1_OnClickEventHandler(object obj)
         {
@@ -37,5 +38,6 @@ namespace RestaurantFinder
             ReservationForm reservation = new ReservationForm(arg2);
             reservation.ShowDialog();
         }
+
     }
 }

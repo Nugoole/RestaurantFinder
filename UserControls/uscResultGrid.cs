@@ -20,7 +20,7 @@ namespace UserControls
             InitializeComponent();
         }
 
-        public void Searched(SearchConditions conditions)
+        public void Searched()
         {
             if(!DesignMode)
             {
@@ -28,27 +28,27 @@ namespace UserControls
                 var DBbase = DB<Store>.GetAll();
 
                 //고른 지역 확인 후 추려냄
-                if (conditions.StateId != 0)
+                if (SearchConditions.Condition.StateId != 0)
                 {
-                    DBbase = DBbase.Where(x => x.StateId == conditions.StateId).ToList();
+                    DBbase = DBbase.Where(x => x.StateId == SearchConditions.Condition.StateId).ToList();
                 }
 
                 //음식 타입 확인 후 추려냄
-                if (conditions.FoodTypeIds.Any())
+                if (SearchConditions.Condition.FoodTypeIds.Any())
                 {
-                    DBbase = DBbase.Where(x => conditions.FoodTypeIds.Contains(x.FoodTypeId)).ToList();
+                    DBbase = DBbase.Where(x => SearchConditions.Condition.FoodTypeIds.Contains(x.FoodTypeId)).ToList();
                 }
 
                 //고른 구역 확인 후 추려냄
-                if (conditions.CityId != 0)
+                if (SearchConditions.Condition.CityId != 0)
                 {
-                    DBbase = DBbase.Where(x => x.CityId == conditions.CityId).ToList();
+                    DBbase = DBbase.Where(x => x.CityId == SearchConditions.Condition.CityId).ToList();
                 }
 
                 //키워드 입력 확인 후 추려냄
-                if (conditions.KeyWord != null)
+                if (SearchConditions.Condition.KeyWord != null)
                 {
-                    DBbase = DBbase.Where(x => x.Outline.Contains(conditions.KeyWord)).ToList();
+                    DBbase = DBbase.Where(x => x.Outline.Contains(SearchConditions.Condition.KeyWord)).ToList();
                 }
 
                 var DBbase2 = from x in DBbase

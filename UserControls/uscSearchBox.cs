@@ -41,24 +41,20 @@ namespace UserControls
             }
 
             SearchConditions.Condition.CityId = (int)cbbCity.SelectedValue;
-            if(txbKeyword.Text != "")
+            if (txbKeyword.Text != "")
                 SearchConditions.Condition.KeyWord = txbKeyword.Text;
+            else
+                SearchConditions.Condition.KeyWord = null;
 
-            OnSearchButtonClicked(SearchConditions.Condition);
+            OnSearchButtonClicked();
         }
 
         #region SearchButtonClicked
-        public event Action<object, SearchConditions> SearchButtonHandler;
-        protected virtual void OnSearchButtonClicked(SearchConditions e)
+        public event Action<object> SearchButtonHandler;
+        protected virtual void OnSearchButtonClicked()
         {
             if (SearchButtonHandler != null)
-                SearchButtonHandler(this, e);
-        }
-        private SearchConditions OnSearchButtonClicked()
-        {
-            OnSearchButtonClicked(SearchConditions.Condition);
-
-            return SearchConditions.Condition;
+                SearchButtonHandler(this);
         }
         #endregion
     }
