@@ -50,6 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckReservationConditon.cs" />
+    <Compile Include="CheckReservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckReservationForm.Designer.cs">
+      <DependentUpon>CheckReservationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="funcsForPivot.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +89,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CheckReservationForm.resx">
+      <DependentUpon>CheckReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
