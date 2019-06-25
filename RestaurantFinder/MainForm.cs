@@ -17,11 +17,24 @@ namespace RestaurantFinder
             InitializeComponent();
         }
 
+        //검색버튼 클릭 시 발생할 함수
+        private void UscSearchBox1_SearchButtonHandler(object arg1, RestaurantDB.DB_jun.SearchConditions arg2)
+        {
+            uscResultGrid1.Searched(arg2);
+            uscResultGrid1.Refresh();
+        }
+        //지도 버튼 클릭 시 발생할 함수
+        private void UcsChooseLocation1_OnClickEventHandler(object obj)
+        {
+            uscSearchBox1.InitCityCbb();
+            uscResultGrid1.PivotTable();
+            uscSearchBox1.Refresh();
+        }
 
         //셀 더블클릭 이벤트 시 발생할 함수
-        private void UscResultGrid1_CellDoubleClickedHandler(object arg1, UserControls.ResultFormats.SearchResultData arg2)
+        private void UscResultGrid1_CellDoubleClickedHandler_1(object arg1, string arg2)
         {
-            ReservationForm reservation = new ReservationForm(arg2.Name);
+            ReservationForm reservation = new ReservationForm(arg2);
             reservation.ShowDialog();
         }
 

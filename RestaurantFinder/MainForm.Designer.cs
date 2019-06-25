@@ -42,7 +42,7 @@
             this.uscResultGrid1.Name = "uscResultGrid1";
             this.uscResultGrid1.Size = new System.Drawing.Size(579, 438);
             this.uscResultGrid1.TabIndex = 1;
-            this.uscResultGrid1.CellDoubleClickedHandler += new System.Action<object, UserControls.ResultFormats.SearchResultData>(this.UscResultGrid1_CellDoubleClickedHandler);
+            this.uscResultGrid1.CellDoubleClickedHandler += new System.Action<object, string>(this.UscResultGrid1_CellDoubleClickedHandler_1);
             // 
             // uscSearchBox1
             // 
@@ -73,6 +73,7 @@
             this.ClientSize = new System.Drawing.Size(1003, 549);
             this.Controls.Add(this.uscResultGrid1);
             this.Controls.Add(this.uscSearchBox1);
+            this.Controls.Add(this.ucsChooseLocation1);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);

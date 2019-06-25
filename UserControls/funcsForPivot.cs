@@ -17,8 +17,7 @@ namespace UserControls
             if (!DesignMode)
             {
                 DataTable dataTable = new DataTable();
-                //            var dbbase = DB<Store>.GetAll();
-                //List<string> foodTypes = DB<FoodType>.GetAll().Select(x=>x.Name).ToList();
+                
                 RestaurantEntities context = new RestaurantEntities();
 
                 var foodTypes = context.FoodTypes.Select(x => x.Name).ToList();
@@ -34,11 +33,11 @@ namespace UserControls
                                          select new
                                          {
                                              Column = foodType,
-                                             Value = foodTypeGroup.Any() ? foodTypeGroup.Count().ToString() : "없음"
+                                             Value = foodTypeGroup.Any() ? foodTypeGroup.Count().ToString() : "0"
                                          }
                             };
 
-                dataTable.Columns.Add("KeyName");
+                dataTable.Columns.Add("음식 통계");
                 foreach (var foodType in foodTypes)
                 {
                     dataTable.Columns.Add(foodType);
@@ -55,6 +54,7 @@ namespace UserControls
                 context.Dispose();
                 gridResult.Columns.Clear();
                 gridResult.DataSource = dataTable;
+                
                 gridResult.Refresh();
             }
         }

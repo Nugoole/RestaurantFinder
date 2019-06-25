@@ -101,7 +101,6 @@
             this.Controls.Add(this.label1);
             this.Name = "uscResultGrid";
             this.Size = new System.Drawing.Size(669, 333);
-            this.Load += new System.EventHandler(this.UscResultGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsResult)).EndInit();
             this.ResumeLayout(false);

@@ -52,7 +52,7 @@ namespace UserControls
                 }
 
                 var DBbase2 = from x in DBbase
-                              select new
+                              select new SearchResultData
                               {
                                   Name = x.Name,
                                   Outline = x.Outline
@@ -68,48 +68,33 @@ namespace UserControls
             }
         }
 
-        private void UscResultGrid_Load(object sender, EventArgs e)
-        {
-            //if (!DesignMode)
-            //{
-            //    bdsResult.DataSource = DB<Store>.GetAll().Select(x => new SearchResultData
-            //    {
-            //        Name = x.Name,
-            //        Outline = x.Outline
-            //    }).ToList();
-
-            //    label1.Text = $"총 {DB<Store>.GetAll().Count()}개의 검색 결과";
-            //}
-        }
-
         //셀 더블클릭시 해당 셀의 정보를 핸들러에 넘겨줌
         private void GridResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!DesignMode)
             {
                 SearchResultData searchResultData = gridResult.CurrentRow.DataBoundItem as SearchResultData;
-
                 if (searchResultData == null)
                     return;
 
-                OnCellDoubleClickd(searchResultData);
+                OnCellDoubleClickd(searchResultData.Name);
             }
         }
 
         //이벤트 정의
         #region CellDoubleClicked
-        public event Action<object, SearchResultData> CellDoubleClickedHandler;
-        protected virtual void OnCellDoubleClickd(SearchResultData e)
+        public event Action<object, string> CellDoubleClickedHandler;
+        protected virtual void OnCellDoubleClickd(string e)
         {
             if (CellDoubleClickedHandler != null)
                 CellDoubleClickedHandler(this, e);
         }
-        private SearchResultData OnCellDoubleClickd()
+        private string OnCellDoubleClickd()
         {
-            SearchResultData args = new SearchResultData();
-            OnCellDoubleClickd(args);
+            string storeName = "\0";
+            OnCellDoubleClickd(storeName);
 
-            return args;
+            return storeName;
         }
         #endregion
     }
