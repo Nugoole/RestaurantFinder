@@ -50,30 +50,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckReservationConditon.cs" />
     <Compile Include="funcsForPivot.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ResultFormats\MapsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ResultFormats\PivotResultData.cs" />
     <Compile Include="ucsChooseLocation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucsChooseLocation.Designer.cs">
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResultFormats\SearchResultData.cs" />
     <Compile Include="uscCheckReservationGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uscCheckReservationGrid.Designer.cs">
       <DependentUpon>uscCheckReservationGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uscReservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscReservation.Designer.cs">
+      <DependentUpon>uscReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
@@ -98,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uscCheckReservationGrid.resx">
       <DependentUpon>uscCheckReservationGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscReservation.resx">
+      <DependentUpon>uscReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uscResultGrid.resx">
       <DependentUpon>uscResultGrid.cs</DependentUpon>
@@ -168,13 +173,13 @@
     <None Include="Properties\DataSources\UserControls.ResultFormats.SearchResultData.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
       <Project>{9657575b-571d-4135-83b6-5cc485335a13}</Project>
       <Name>RestaurantDB</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

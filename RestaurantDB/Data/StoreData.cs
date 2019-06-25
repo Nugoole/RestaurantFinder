@@ -9,5 +9,7 @@ namespace RestaurantDB.Data
 {
     public class StoreData : EntityData<Store>
     {
+
+        //public List<searchresultdata>
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace UserControls
+namespace RestaurantDB
 {
     public class MapsData
     {

@@ -8,7 +8,7 @@ namespace RestaurantDB.DB_jun
 {
     public class ReservationData : EntityData<Reservation>
     {
-        public List<Reservation> GetOOO()
+        public List<Reservation> GetReservationHistory()
         {
             using (RestaurantEntities context = new RestaurantEntities())
             {

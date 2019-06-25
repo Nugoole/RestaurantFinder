@@ -1,13 +1,6 @@
 ﻿using RestaurantDB;
 using RestaurantDB.DB_jun;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RestaurantFinder
@@ -33,11 +26,11 @@ namespace RestaurantFinder
             //reservation.StoreId = EntityData<Store>.GetAll().Where(x => x.Name == txbStoreName.Text).Select(x=>x.StoreId).ToList()[0];
             reservation.Name = txbReservationName.Text;
             reservation.PhoneNumber = txbPhoneNumber.Text;
-            reservation.ReservationOn = ReservationOn.Value+ new TimeSpan(3, 0, 0) ;
+            reservation.ReservationOn = ReservationOn.Value+ new TimeSpan(3, 0, 0);
             
             reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
 
-            if(DB.Reservation.Insert(reservation))
+            if (DB.Reservation.Insert(reservation))
                 MessageBox.Show("입력성공");
             else
                 MessageBox.Show("입력실패");

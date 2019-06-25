@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserControls.ResultFormats
-{
+namespace RestaurantDB
+{ 
     public class SearchResultData
     {
         public string Name { get; set; }

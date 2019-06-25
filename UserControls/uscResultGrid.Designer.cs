@@ -1,4 +1,6 @@
-﻿namespace UserControls
+﻿using RestaurantDB;
+
+namespace UserControls
 {
     partial class uscResultGrid
     {
@@ -91,7 +93,7 @@
             // 
             // bdsResult
             // 
-            this.bdsResult.DataSource = typeof(UserControls.ResultFormats.SearchResultData);
+            this.bdsResult.DataSource = typeof(SearchResultData);
             // 
             // uscResultGrid
             // 

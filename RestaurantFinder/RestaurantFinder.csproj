@@ -39,9 +39,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="RestaurantDB">
-      <HintPath>..\RestaurantDB\bin\Debug\RestaurantDB.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -115,12 +112,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RestaurantDB\RestaurantDB.csproj">
+      <Project>{9657575B-571D-4135-83B6-5CC485335A13}</Project>
+      <Name>RestaurantDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserControls\UserControls.csproj">
-      <Project>{9826664C-4AE5-4CD8-9E63-864218C89921}</Project>
+      <Project>{9826664c-4ae5-4cd8-9e63-864218c89921}</Project>
       <Name>UserControls</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\UserControls\UserControls.csproj">
       <Project>{9826664c-4ae5-4cd8-9e63-864218c89921}</Project>
       <Name>UserControls</Name>
