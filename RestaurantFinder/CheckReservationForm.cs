@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantDB.DB_jun;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace RestaurantFinder
         public CheckReservationForm()
         {
             InitializeComponent();
+        }
+
+        private void UscReservationCheckBox1_CheckReservation(object arg1, string arg2)
+        {
+            uscCheckReservationGrid1.SearchedReservation(arg2);
+            uscCheckReservationGrid1.Refresh();
         }
     }
 }

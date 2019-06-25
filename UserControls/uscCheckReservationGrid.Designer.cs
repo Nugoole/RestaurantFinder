@@ -31,63 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bdsCheckReservation = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationOnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfPeopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCheckReservation)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.storeDataGridViewTextBoxColumn,
-            this.reservationOnDataGridViewTextBoxColumn,
-            this.numberOfPeopleDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bdsCheckReservation;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(650, 384);
+            this.dataGridView1.Size = new System.Drawing.Size(653, 397);
             this.dataGridView1.TabIndex = 0;
             // 
             // bdsCheckReservation
             // 
             this.bdsCheckReservation.DataSource = typeof(RestaurantDB.Reservation);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // storeDataGridViewTextBoxColumn
-            // 
-            this.storeDataGridViewTextBoxColumn.DataPropertyName = "Store";
-            this.storeDataGridViewTextBoxColumn.HeaderText = "Store";
-            this.storeDataGridViewTextBoxColumn.Name = "storeDataGridViewTextBoxColumn";
-            this.storeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // reservationOnDataGridViewTextBoxColumn
-            // 
-            this.reservationOnDataGridViewTextBoxColumn.DataPropertyName = "ReservationOn";
-            this.reservationOnDataGridViewTextBoxColumn.HeaderText = "ReservationOn";
-            this.reservationOnDataGridViewTextBoxColumn.Name = "reservationOnDataGridViewTextBoxColumn";
-            this.reservationOnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numberOfPeopleDataGridViewTextBoxColumn
-            // 
-            this.numberOfPeopleDataGridViewTextBoxColumn.DataPropertyName = "NumberOfPeople";
-            this.numberOfPeopleDataGridViewTextBoxColumn.HeaderText = "NumberOfPeople";
-            this.numberOfPeopleDataGridViewTextBoxColumn.Name = "numberOfPeopleDataGridViewTextBoxColumn";
-            this.numberOfPeopleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // uscCheckReservationGrid
             // 
@@ -106,9 +68,5 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource bdsCheckReservation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn storeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reservationOnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfPeopleDataGridViewTextBoxColumn;
     }
 }
