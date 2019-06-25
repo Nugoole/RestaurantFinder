@@ -53,8 +53,14 @@
     <Compile Include="City.cs">
       <DependentUpon>Restaurant.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\CityData.cs" />
+    <Compile Include="Data\EntityData.cs" />
+    <Compile Include="Data\StateData.cs" />
+    <Compile Include="Data\StoreData.cs" />
     <Compile Include="DB_jun\DB.cs" />
+    <Compile Include="Data\ReservationData.cs" />
     <Compile Include="DB_jun\SearchConditions.cs" />
+    <Compile Include="Entities\Reservation.cs" />
     <Compile Include="FoodType.cs">
       <DependentUpon>Restaurant.tt</DependentUpon>
     </Compile>

@@ -51,12 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckReservationConditon.cs" />
-    <Compile Include="CheckReservationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CheckReservationForm.Designer.cs">
-      <DependentUpon>CheckReservationForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="funcsForPivot.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +69,12 @@
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="ResultFormats\SearchResultData.cs" />
+    <Compile Include="uscCheckReservationGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscCheckReservationGrid.Designer.cs">
+      <DependentUpon>uscCheckReservationGrid.cs</DependentUpon>
+    </Compile>
     <Compile Include="uscResultGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,15 +89,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CheckReservationForm.resx">
-      <DependentUpon>CheckReservationForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ucsChooseLocation.resx">
       <DependentUpon>ucsChooseLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscCheckReservationGrid.resx">
+      <DependentUpon>uscCheckReservationGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uscResultGrid.resx">
       <DependentUpon>uscResultGrid.cs</DependentUpon>
@@ -107,6 +107,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\RestaurantDB.Reservation.datasource" />
     <None Include="Resources\Busan.png" />
   </ItemGroup>
   <ItemGroup>

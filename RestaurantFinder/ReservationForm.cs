@@ -29,14 +29,15 @@ namespace RestaurantFinder
         {
             Reservation reservation = new Reservation();
 
-            reservation.StoreId = DB<Store>.GetAll().Where(x => x.Name == txbStoreName.Text).Select(x=>x.StoreId).ToList()[0];
+            //TODO
+            //reservation.StoreId = EntityData<Store>.GetAll().Where(x => x.Name == txbStoreName.Text).Select(x=>x.StoreId).ToList()[0];
             reservation.Name = txbReservationName.Text;
             reservation.PhoneNumber = txbPhoneNumber.Text;
             reservation.ReservationOn = ReservationOn.Value+ new TimeSpan(3, 0, 0) ;
             
             reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
 
-            if(DB<Reservation>.Insert(reservation))
+            if(DB.Reservation.Insert(reservation))
                 MessageBox.Show("입력성공");
             else
                 MessageBox.Show("입력실패");

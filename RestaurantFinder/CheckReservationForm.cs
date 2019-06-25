@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UserControls
+namespace RestaurantFinder
 {
     public partial class CheckReservationForm : Form
     {
@@ -16,7 +16,5 @@ namespace UserControls
         {
             InitializeComponent();
         }
-
-
     }
 }

@@ -27,7 +27,10 @@ namespace UserControls
         public void InitCityCbb()
         {
             if (!DesignMode || SearchConditions.Condition.StateId != 0)
-                bdsCity.DataSource = DB<City>.GetAll().Where(x=>x.StateId == SearchConditions.Condition.StateId).ToList();            
+                ;
+            //TODO
+                //bdsCity.DataSource = DB.City.
+                //    EntityData<City>.GetAll().Where(x=>x.StateId == SearchConditions.Condition.StateId).ToList();            
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace UserControls
             if(!DesignMode)
             {
                 //전체 내용 가져오기
-                var DBbase = DB<Store>.GetAll();
+                var DBbase =DB.Store.GetAll();
 
                 //고른 지역 확인 후 추려냄
                 if (conditions.StateId != 0)

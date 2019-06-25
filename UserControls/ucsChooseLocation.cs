@@ -96,7 +96,8 @@ namespace UserControls
                 }
             }
 
-            SearchConditions.Condition.StateId = DB<State>.GetAll().Where(x => x.Name == button.Text).Select(x => x.StateId).ToList()[0];
+            SearchConditions.Condition.StateId = DB.State.FindFirstStateId(button.Text);
+
             _OnClick();
         }
 
