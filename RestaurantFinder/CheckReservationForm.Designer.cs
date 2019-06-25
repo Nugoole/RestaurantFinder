@@ -48,6 +48,7 @@
             this.uscCheckReservationGrid1.Name = "uscCheckReservationGrid1";
             this.uscCheckReservationGrid1.Size = new System.Drawing.Size(490, 342);
             this.uscCheckReservationGrid1.TabIndex = 1;
+            this.uscCheckReservationGrid1.OnReservationUpdate += new System.Action<object, RestaurantDB.Reservation>(this.UscCheckReservationGrid1_OnReservationUpdate);
             // 
             // CheckReservationForm
             // 

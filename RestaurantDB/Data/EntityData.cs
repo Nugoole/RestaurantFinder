@@ -42,5 +42,47 @@ namespace RestaurantDB.DB_jun
             }
         }
 
+        public bool Update(T entity)
+        {
+            using(DbContext context = new RestaurantEntities())
+            {
+                context.Entry(entity).State = EntityState.Modified;
+
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+
+                    if (e != null)
+                        return false;
+                }
+
+                return true;
+            }
+        }
+
+        public bool Delete(T entity)
+        {
+            using(DbContext context = new RestaurantEntities())
+            {
+                context.Entry(entity).State = EntityState.Deleted;
+
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+
+                    if (e != null)
+                        return false;
+                }
+
+                return true;
+            }
+        }
+
     }
 }

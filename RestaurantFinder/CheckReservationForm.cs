@@ -1,4 +1,5 @@
-﻿using RestaurantDB.DB_jun;
+﻿using RestaurantDB;
+using RestaurantDB.DB_jun;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,14 @@ namespace RestaurantFinder
         {
             uscCheckReservationGrid1.SearchedReservation(arg2);
             uscCheckReservationGrid1.Refresh();
+        }
+
+        private void UscCheckReservationGrid1_OnReservationUpdate(object arg1, Reservation reservation)
+        {
+            ReservationForm reservationForm = new ReservationForm();
+            MessageBox.Show(reservation.ReservationId.ToString());
+            reservationForm.UpdateMode(reservation);
+            reservationForm.Show();
         }
     }
 }

@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bdsCheckReservation = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.storeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationOnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberOfPeopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsCheckReservation = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCheckReservation)).BeginInit();
             this.SuspendLayout();
@@ -57,12 +57,11 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(653, 397);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // bdsCheckReservation
-            // 
-            this.bdsCheckReservation.DataSource = typeof(RestaurantDB.Reservation);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellDoubleClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataGridView1_KeyDown);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -91,6 +90,10 @@
             this.numberOfPeopleDataGridViewTextBoxColumn.HeaderText = "예약 인원";
             this.numberOfPeopleDataGridViewTextBoxColumn.Name = "numberOfPeopleDataGridViewTextBoxColumn";
             this.numberOfPeopleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bdsCheckReservation
+            // 
+            this.bdsCheckReservation.DataSource = typeof(RestaurantDB.Reservation);
             // 
             // uscCheckReservationGrid
             // 
