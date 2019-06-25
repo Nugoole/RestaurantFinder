@@ -54,7 +54,7 @@
             this.uscSearchBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.uscSearchBox1.Size = new System.Drawing.Size(579, 118);
             this.uscSearchBox1.TabIndex = 0;
-            this.uscSearchBox1.SearchButtonHandler += new System.Action<object, RestaurantDB.DB_jun.SearchConditions>(this.UscSearchBox1_SearchButtonHandler);
+            this.uscSearchBox1.SearchButtonHandler += new System.Action<object>(this.UscSearchBox1_SearchButtonHandler);
             // 
             // ucsChooseLocation1
             // 
