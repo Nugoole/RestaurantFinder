@@ -28,7 +28,6 @@ namespace RestaurantFinder
         private void UscCheckReservationGrid1_OnReservationUpdate(object arg1, Reservation reservation)
         {
             ReservationForm reservationForm = new ReservationForm();
-            MessageBox.Show(reservation.ReservationId.ToString());
             reservationForm.UpdateMode(reservation);
             reservationForm.Show();
         }

@@ -54,8 +54,6 @@ namespace UserControls
                 context.Dispose();
                 gridResult.Columns.Clear();
                 gridResult.DataSource = dataTable;
-                
-                gridResult.Refresh();
             }
         }
     }

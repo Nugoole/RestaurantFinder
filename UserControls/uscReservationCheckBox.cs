@@ -37,5 +37,10 @@ namespace UserControls
             return args;
         }
 
+        private void TxbPhoneNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnCheckReservation.PerformClick();
+        }
     }
 }

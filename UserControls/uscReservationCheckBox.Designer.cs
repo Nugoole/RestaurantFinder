@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCheckReservation = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,21 +49,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "예약확인";
             // 
-            // label1
+            // btnCheckReservation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "전화번호 :";
-            // 
-            // txbPhoneNumber
-            // 
-            this.txbPhoneNumber.Location = new System.Drawing.Point(83, 23);
-            this.txbPhoneNumber.Name = "txbPhoneNumber";
-            this.txbPhoneNumber.Size = new System.Drawing.Size(151, 21);
-            this.txbPhoneNumber.TabIndex = 1;
+            this.btnCheckReservation.Location = new System.Drawing.Point(382, 21);
+            this.btnCheckReservation.Name = "btnCheckReservation";
+            this.btnCheckReservation.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckReservation.TabIndex = 3;
+            this.btnCheckReservation.Text = "조회";
+            this.btnCheckReservation.UseVisualStyleBackColor = true;
+            this.btnCheckReservation.Click += new System.EventHandler(this.BtnCheckReservation_Click);
             // 
             // label2
             // 
@@ -75,22 +69,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "ex) 010-7777-7777";
             // 
-            // btnCheckReservation
+            // txbPhoneNumber
             // 
-            this.btnCheckReservation.Location = new System.Drawing.Point(382, 21);
-            this.btnCheckReservation.Name = "btnCheckReservation";
-            this.btnCheckReservation.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckReservation.TabIndex = 3;
-            this.btnCheckReservation.Text = "조회";
-            this.btnCheckReservation.UseVisualStyleBackColor = true;
-            this.btnCheckReservation.Click += new System.EventHandler(this.BtnCheckReservation_Click);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(83, 23);
+            this.txbPhoneNumber.Name = "txbPhoneNumber";
+            this.txbPhoneNumber.Size = new System.Drawing.Size(151, 21);
+            this.txbPhoneNumber.TabIndex = 1;
+            this.txbPhoneNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxbPhoneNumber_KeyDown);
             // 
-            // uscReservationSearchBox
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "전화번호 :";
+            // 
+            // uscReservationCheckBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Name = "uscReservationSearchBox";
+            this.Name = "uscReservationCheckBox";
             this.Size = new System.Drawing.Size(498, 77);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

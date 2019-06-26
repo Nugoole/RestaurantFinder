@@ -41,7 +41,11 @@ namespace RestaurantFinder
             reservation.ReservationOn = ReservationOn.Value;
             reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
 
-            
+            if(string.IsNullOrEmpty(reservation.PhoneNumber) == true)
+            {
+                MessageBox.Show("전화번호를 입력해주세요!", "경고", MessageBoxButtons.OK);
+                return;
+            }
             if (DB.Reservation.Update(reservation))
             {
                 if (MessageBox.Show("업데이트 성공") == DialogResult.OK)

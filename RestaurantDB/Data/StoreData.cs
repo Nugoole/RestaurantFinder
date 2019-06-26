@@ -53,7 +53,7 @@ namespace RestaurantDB.Data
                             where x.Outline.Contains(SearchConditions.Condition.KeyWord)
                             select x;
 
-                var resultQuery = from x in query.ToList()
+                var resultQuery = from x in query
                                   select new SearchResultData
                                   {
                                       Name = x.Name,

@@ -33,6 +33,7 @@ namespace UserControls
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             SearchConditions.Condition.FoodTypeIds.Clear();
+
             foreach (var item in Controls[0].Controls)
             {
                 if (item.GetType() == typeof(CheckBox))
@@ -41,6 +42,7 @@ namespace UserControls
             }
 
             SearchConditions.Condition.CityId = (int)cbbCity.SelectedValue;
+
             if (txbKeyword.Text != "")
                 SearchConditions.Condition.KeyWord = txbKeyword.Text;
             else

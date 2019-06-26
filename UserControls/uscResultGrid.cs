@@ -55,13 +55,6 @@ namespace UserControls
             if (CellDoubleClickedHandler != null)
                 CellDoubleClickedHandler(this, e);
         }
-        private string OnCellDoubleClickd()
-        {
-            string storeName = "\0";
-            OnCellDoubleClickd(storeName);
-
-            return storeName;
-        }
         #endregion
     }
 }
