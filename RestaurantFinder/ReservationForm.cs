@@ -8,12 +8,7 @@ namespace RestaurantFinder
     public partial class ReservationForm : Form
     {
         public int ReservationId { get; private set; }
-        public ReservationForm()
-        {
-            InitializeComponent();
-        }
-
-        public ReservationForm(string storeName)
+        public ReservationForm(string storeName = null)
         {
             InitializeComponent();
             txbStoreName.Text = storeName;
@@ -27,37 +22,40 @@ namespace RestaurantFinder
             txbNumberOfPeople.Text = reservation.NumberOfPeople.ToString();
             ReservationOn.Value = reservation.ReservationOn;
             ReservationId = reservation.ReservationId;
+
             btnMadeReservation.Text = "변경";
         }
 
         private void BtnMadeReservation_Click(object sender, EventArgs e)
         {
-            Reservation reservation = new Reservation();
-            if(ReservationId != 0)
-                reservation.ReservationId = ReservationId;
-            reservation.StoreId = DB.Store.FindStoreId(txbStoreName.Text);
-            reservation.Name = txbReservationName.Text;
-            reservation.PhoneNumber = txbPhoneNumber.Text;
-            reservation.ReservationOn = ReservationOn.Value;
-            reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
-            
-            if(string.IsNullOrEmpty(reservation.PhoneNumber) == true)
+            int NumOfPeople;
+
+            if (string.IsNullOrEmpty(txbPhoneNumber.Text) == true)
             {
                 MessageBox.Show("전화번호를 입력해주세요!", "경고", MessageBoxButtons.OK);
                 return;
             }
-
-            if (ReservationId != 0)
+            else if (int.TryParse(txbNumberOfPeople.Text, out NumOfPeople) == false)
             {
-                if (DB.Reservation.Update(reservation))
-                {
-                    if (MessageBox.Show("업데이트 성공") == DialogResult.OK)
-                        Dispose();
-                }
+                MessageBox.Show("숫자만 입력하세요", "경고", MessageBoxButtons.OK);
+                return;
             }
-            else if (DB.Reservation.Insert(reservation))
+
+
+            Reservation reservation = new Reservation();
+
+
+            reservation.ReservationId = ReservationId;
+            reservation.StoreId = DB.Store.FindStoreId(txbStoreName.Text);
+            reservation.Name = txbReservationName.Text;
+            reservation.PhoneNumber = txbPhoneNumber.Text;
+            reservation.ReservationOn = ReservationOn.Value;
+            reservation.NumberOfPeople = NumOfPeople;
+
+
+            if (DB.Reservation.InsertOrUpdate(reservation) == true)
             {
-                if (MessageBox.Show("입력성공") == DialogResult.OK)
+                if (MessageBox.Show("성공") == DialogResult.OK)
                     Dispose();
             }
             else
@@ -67,6 +65,11 @@ namespace RestaurantFinder
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ReservationForm_Load(object sender, EventArgs e)
+        {
+            ReservationOn.MinDate = DateTime.Now;
         }
     }
 }

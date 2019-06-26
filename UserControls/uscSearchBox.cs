@@ -36,9 +36,8 @@ namespace UserControls
 
             foreach (var item in Controls[0].Controls)
             {
-                if (item.GetType() == typeof(CheckBox))
-                    if ((item as CheckBox).Checked)
-                        SearchConditions.Condition.FoodTypeIds.Add(int.Parse((item as CheckBox).Tag.ToString()));
+                if (item.GetType() == typeof(CheckBox) && (item as CheckBox).Checked)
+                    SearchConditions.Condition.FoodTypeIds.Add(int.Parse((item as CheckBox).Tag.ToString()));
             }
 
             SearchConditions.Condition.CityId = (int)cbbCity.SelectedValue;

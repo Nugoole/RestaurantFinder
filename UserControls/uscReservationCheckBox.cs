@@ -22,20 +22,14 @@ namespace UserControls
             OnCheckReservation(txbPhoneNumber.Text);
         }
 
-
+        #region CheckReservationEvent
         public event Action<object, string> CheckReservation;
         protected virtual void OnCheckReservation(string e)
         {
             if (CheckReservation != null)
                 CheckReservation(this, e);
         }
-        private string OnArgsName()
-        {
-            string args = "";
-            OnCheckReservation(args);
-
-            return args;
-        }
+        #endregion
 
         private void TxbPhoneNumber_KeyDown(object sender, KeyEventArgs e)
         {

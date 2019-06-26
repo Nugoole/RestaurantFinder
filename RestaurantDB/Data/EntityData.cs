@@ -63,6 +63,7 @@ namespace RestaurantDB.DB_jun
             }
         }
 
+
         public bool Delete(T entity)
         {
             using(DbContext context = new RestaurantEntities())

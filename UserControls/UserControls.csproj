@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckReservationEventArgs.cs" />
     <Compile Include="funcsForPivot.cs">
       <SubType>UserControl</SubType>
     </Compile>

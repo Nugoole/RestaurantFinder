@@ -21,11 +21,10 @@ namespace UserControls
 
         public void SearchedReservation(string phoneNumber)
         {
-            if(!DesignMode)
+            if (!DesignMode)
             {
                 var list = DB.Reservation.GetReservationList(phoneNumber);
                 bdsCheckReservation.DataSource = list;
-                
             }
         }
 
@@ -56,10 +55,9 @@ namespace UserControls
         private void DataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
             Reservation reservation = dataGridView1.CurrentRow.DataBoundItem as Reservation;
-            if (reservation != null)
-                if (e.KeyCode == Keys.Delete)
-                    if(MessageBox.Show("삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                        DB.Reservation.Delete(reservation);
+            if (reservation != null && e.KeyCode == Keys.Delete)
+                if (MessageBox.Show("삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    DB.Reservation.Delete(reservation);
         }
     }
 }

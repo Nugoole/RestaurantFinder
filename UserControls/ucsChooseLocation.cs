@@ -20,16 +20,11 @@ namespace UserControls
         public ucsChooseLocation()
         {
             InitializeComponent();
-            BitmapNButtonsInit();
-            buttons.ForEach(x => x.MouseEnter += OnMouseEnter);
-            buttons.ForEach(x => x.MouseLeave += OnMouseLeave);
-            buttons.ForEach(x => x.Click += OnButtonClick);
         }
         public List<Button> buttons { get; set; }
         public List<MapsData> Maps { get; set; }
         public void BitmapNButtonsInit()
         {
-
             buttons = new List<Button>();
 
             foreach (var item in Controls)
@@ -49,6 +44,7 @@ namespace UserControls
                 buttons.ForEach(x => x.Click += OnButtonClick);
 
                 pictureBox.Image = Resources.전국지도;
+
                 Maps = Resources.ResourceManager
                            .GetResourceSet(CultureInfo.CurrentCulture, true, true)
                            .Cast<DictionaryEntry>()

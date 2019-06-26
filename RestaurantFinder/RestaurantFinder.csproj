@@ -75,12 +75,6 @@
     <Compile Include="ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CheckReservationForm.resx">
       <DependentUpon>CheckReservationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,9 +92,6 @@
     </Compile>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

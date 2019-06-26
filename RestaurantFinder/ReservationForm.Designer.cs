@@ -90,11 +90,12 @@
             // 
             // ReservationOn
             // 
+            this.ReservationOn.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.ReservationOn.Location = new System.Drawing.Point(90, 136);
             this.ReservationOn.Name = "ReservationOn";
             this.ReservationOn.Size = new System.Drawing.Size(200, 21);
             this.ReservationOn.TabIndex = 10;
-            this.ReservationOn.Value = new System.DateTime(2019, 6, 24, 17, 10, 1, 0);
+            this.ReservationOn.Value = new System.DateTime(2019, 6, 26, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -188,6 +189,7 @@
             this.Name = "ReservationForm";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "ReservationForm";
+            this.Load += new System.EventHandler(this.ReservationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
