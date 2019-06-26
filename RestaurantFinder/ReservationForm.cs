@@ -7,7 +7,7 @@ namespace RestaurantFinder
 {
     public partial class ReservationForm : Form
     {
-        public int ReservationId { get; private set; } = 0;
+        public int ReservationId { get; private set; }
         public ReservationForm()
         {
             InitializeComponent();
@@ -33,23 +33,27 @@ namespace RestaurantFinder
         private void BtnMadeReservation_Click(object sender, EventArgs e)
         {
             Reservation reservation = new Reservation();
-
-            reservation.ReservationId = ReservationId;
+            if(ReservationId != 0)
+                reservation.ReservationId = ReservationId;
             reservation.StoreId = DB.Store.FindStoreId(txbStoreName.Text);
             reservation.Name = txbReservationName.Text;
             reservation.PhoneNumber = txbPhoneNumber.Text;
             reservation.ReservationOn = ReservationOn.Value;
             reservation.NumberOfPeople = int.Parse(txbNumberOfPeople.Text);
-
+            
             if(string.IsNullOrEmpty(reservation.PhoneNumber) == true)
             {
                 MessageBox.Show("전화번호를 입력해주세요!", "경고", MessageBoxButtons.OK);
                 return;
             }
-            if (DB.Reservation.Update(reservation))
+
+            if (ReservationId != 0)
             {
-                if (MessageBox.Show("업데이트 성공") == DialogResult.OK)
-                    Dispose();
+                if (DB.Reservation.Update(reservation))
+                {
+                    if (MessageBox.Show("업데이트 성공") == DialogResult.OK)
+                        Dispose();
+                }
             }
             else if (DB.Reservation.Insert(reservation))
             {
