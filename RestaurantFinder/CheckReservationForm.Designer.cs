@@ -58,7 +58,7 @@
             this.Controls.Add(this.uscCheckReservationGrid1);
             this.Controls.Add(this.uscReservationCheckBox1);
             this.Name = "CheckReservationForm";
-            this.Text = "CheckReservationForm";
+            this.Text = "예약 확인";
             this.ResumeLayout(false);
 
         }

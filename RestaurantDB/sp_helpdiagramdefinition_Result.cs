@@ -10,17 +10,10 @@
 namespace RestaurantDB
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Reservation
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int ReservationId { get; set; }
-        public string Name { get; set; }
-        public System.DateTime ReservationOn { get; set; }
-        public string PhoneNumber { get; set; }
-        public int NumberOfPeople { get; set; }
-        public int StoreId { get; set; }
-    
-        public virtual Store Store { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

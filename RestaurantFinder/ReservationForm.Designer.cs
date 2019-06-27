@@ -188,7 +188,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ReservationForm";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Text = "ReservationForm";
+            this.Text = "예약";
             this.Load += new System.EventHandler(this.ReservationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

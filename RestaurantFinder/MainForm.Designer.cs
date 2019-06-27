@@ -133,7 +133,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1019, 587);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "음식점 찾기";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

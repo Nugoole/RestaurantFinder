@@ -87,10 +87,19 @@
     <Compile Include="ResultFormat\CityListFormat.cs" />
     <Compile Include="ResultFormat\MapsData.cs" />
     <Compile Include="ResultFormat\SearchResultData.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Restaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Restaurant.tt</DependentUpon>
+    </Compile>
     <Compile Include="State.cs">
       <DependentUpon>Restaurant.tt</DependentUpon>
     </Compile>
     <Compile Include="Store.cs">
+      <DependentUpon>Restaurant.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>Restaurant.tt</DependentUpon>
     </Compile>
   </ItemGroup>

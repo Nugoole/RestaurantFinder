@@ -12,15 +12,12 @@ namespace RestaurantDB
     using System;
     using System.Collections.Generic;
     
-    public partial class Reservation
+    public partial class sysdiagram
     {
-        public int ReservationId { get; set; }
-        public string Name { get; set; }
-        public System.DateTime ReservationOn { get; set; }
-        public string PhoneNumber { get; set; }
-        public int NumberOfPeople { get; set; }
-        public int StoreId { get; set; }
-    
-        public virtual Store Store { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
